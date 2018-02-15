@@ -12,15 +12,22 @@ struct ClientModel {
     
     let company: String
     let owner: String
-    let ownerInitials: String
+    var ownerInitials: String
     
     init(company: String, owner: String) {
         self.company = company
         self.owner = owner
-        let inicials = owner.components(separatedBy: " ").reduce("") { $0 + $1.first }
-        let threeInicials = inicials.prefix(3)
-        ownerInitials = String(threeInicials)
+        self.ownerInitials = ""
+        let inicials = generateThreeInicials(name: owner)
+        self.ownerInitials = inicials
     }
+    
+    func generateThreeInicials(name: String) -> String {
+        let inicials = name.components(separatedBy: " ").reduce("") { $0 + $1.first }
+        let threeInicials = inicials.prefix(3)
+        return String(threeInicials)
+    }
+
 }
 
 extension String {

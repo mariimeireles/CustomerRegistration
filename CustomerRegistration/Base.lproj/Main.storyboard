@@ -13,7 +13,7 @@
         <!--Clients-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ClientListViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,16 +22,20 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="497"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="gVl-bG-HeL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Client" rowHeight="120" id="gVl-bG-HeL" customClass="ClientCell" customModule="CustomerRegistration" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gVl-bG-HeL" id="SS6-Eh-NkT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OCI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIy-en-Fjd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIy-en-Fjd">
                                                     <rect key="frame" x="15" y="11" width="85" height="85"/>
                                                     <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="a4Q-B4-V4l"/>
+                                                        <constraint firstAttribute="height" constant="85" id="c8m-0h-mRq"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -77,8 +81,17 @@
                                             <constraint firstItem="PJT-Qs-QdC" firstAttribute="top" secondItem="gVl-bG-HeL" secondAttribute="top" constant="11" id="WlM-Db-SOp"/>
                                             <constraint firstItem="pIy-en-Fjd" firstAttribute="top" secondItem="gVl-bG-HeL" secondAttribute="top" constant="11" id="iId-SZ-xg3"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="companyNameLabel" destination="rvH-4P-vJG" id="Vs2-bq-4go"/>
+                                            <outlet property="initialsLabel" destination="pIy-en-Fjd" id="avr-4C-MGo"/>
+                                            <outlet property="ownerNameLabel" destination="avX-qo-0dI" id="uqZ-Kn-Es3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Sni-Zv-bvg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8uR-Bm-Epz"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHA-zg-u6M">
                                 <rect key="frame" x="75" y="583" width="225" height="54"/>
@@ -87,7 +100,7 @@
                                     <constraint firstAttribute="height" constant="54" id="3ec-ex-y5I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Confirm">
+                                <state key="normal" title="Add Client">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
@@ -105,6 +118,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Clients" id="YNd-5M-dl0"/>
+                    <connections>
+                        <outlet property="tableView" destination="srA-mS-evG" id="sLk-hQ-bHP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

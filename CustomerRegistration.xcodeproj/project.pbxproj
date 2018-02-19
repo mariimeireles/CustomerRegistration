@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49423E7920348323009C3599 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49423E7820348323009C3599 /* Client.swift */; };
+		49423E7920348323009C3599 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49423E7820348323009C3599 /* Customer.swift */; };
 		49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF814A20347FB20017E1FA /* AppDelegate.swift */; };
 		49CF815020347FB20017E1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CF814E20347FB20017E1FA /* Main.storyboard */; };
 		49CF815220347FB20017E1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CF815120347FB20017E1FA /* Assets.xcassets */; };
 		49CF815520347FB20017E1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CF815320347FB20017E1FA /* LaunchScreen.storyboard */; };
-		49EDB1F52036208200F44319 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EDB1F42036208200F44319 /* ClientTests.swift */; };
+		49EDB1F52036208200F44319 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EDB1F42036208200F44319 /* CustomerTests.swift */; };
 		49EDB1FF2036231C00F44319 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
 		49EDB2002036231C00F44319 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
 		49EDB2022036233D00F44319 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49EDB2032036233D00F44319 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D3EDEF2203B1853003E9ABC /* ClientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3EDEF1203B1853003E9ABC /* ClientListViewController.swift */; };
-		4D7D93EF203B1AC80044FFCF /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* ClientCell.swift */; };
-		4DFD3208203B394400096BA8 /* LocalClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* LocalClients.swift */; };
-		4DFF3238203B3BCC00C6C561 /* ClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* ClientListViewModel.swift */; };
-		4DFF323A203B5DDF00C6C561 /* ClientListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* ClientListState.swift */; };
+		4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */; };
+		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
+		4DFD3208203B394400096BA8 /* LocalCustomers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* LocalCustomers.swift */; };
+		4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */; };
+		4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */; };
 		4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF323C203B711F00C6C561 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		49423E7820348323009C3599 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		49423E7820348323009C3599 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		49CF814720347FB20017E1FA /* CustomerRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CF814A20347FB20017E1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CF814F20347FB20017E1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,15 +58,15 @@
 		49CF815420347FB20017E1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49CF815620347FB20017E1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49EDB1F22036208200F44319 /* ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49EDB1F42036208200F44319 /* ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
+		49EDB1F42036208200F44319 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		49EDB1F62036208200F44319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49EDB1FD2036231C00F44319 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		49EDB1FE2036231C00F44319 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		4D3EDEF1203B1853003E9ABC /* ClientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewController.swift; sourceTree = "<group>"; };
-		4D7D93EE203B1AC80044FFCF /* ClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
-		4DFD3207203B394400096BA8 /* LocalClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalClients.swift; sourceTree = "<group>"; };
-		4DFF3237203B3BCC00C6C561 /* ClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewModel.swift; sourceTree = "<group>"; };
-		4DFF3239203B5DDF00C6C561 /* ClientListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListState.swift; sourceTree = "<group>"; };
+		4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
+		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
+		4DFD3207203B394400096BA8 /* LocalCustomers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCustomers.swift; sourceTree = "<group>"; };
+		4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
+		4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListState.swift; sourceTree = "<group>"; };
 		4DFF323C203B711F00C6C561 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,22 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49423E76203482FA009C3599 /* Clients */ = {
+		49423E76203482FA009C3599 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
 				49423E7720348315009C3599 /* Model */,
 				4D3EDEF0203B183F003E9ABC /* View */,
 				49423E7B203490D5009C3599 /* View Model */,
 			);
-			path = Clients;
+			path = Customer;
 			sourceTree = "<group>";
 		};
 		49423E7720348315009C3599 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				49423E7820348323009C3599 /* Client.swift */,
-				4DFD3207203B394400096BA8 /* LocalClients.swift */,
-				4DFF3239203B5DDF00C6C561 /* ClientListState.swift */,
+				49423E7820348323009C3599 /* Customer.swift */,
+				4DFD3207203B394400096BA8 /* LocalCustomers.swift */,
+				4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 		49423E7B203490D5009C3599 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF3237203B3BCC00C6C561 /* ClientListViewModel.swift */,
+				4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				49CF814920347FB20017E1FA /* CustomerRegistration */,
-				49EDB1F32036208200F44319 /* ClientTests */,
+				49EDB1F32036208200F44319 /* CustomerTests */,
 				49CF814820347FB20017E1FA /* Products */,
 				49EDB1FC2036231B00F44319 /* Frameworks */,
 			);
@@ -140,7 +140,7 @@
 		49CF814920347FB20017E1FA /* CustomerRegistration */ = {
 			isa = PBXGroup;
 			children = (
-				49423E76203482FA009C3599 /* Clients */,
+				49423E76203482FA009C3599 /* Customer */,
 				49CF814A20347FB20017E1FA /* AppDelegate.swift */,
 				49CF814E20347FB20017E1FA /* Main.storyboard */,
 				49CF815120347FB20017E1FA /* Assets.xcassets */,
@@ -150,13 +150,13 @@
 			path = CustomerRegistration;
 			sourceTree = "<group>";
 		};
-		49EDB1F32036208200F44319 /* ClientTests */ = {
+		49EDB1F32036208200F44319 /* CustomerTests */ = {
 			isa = PBXGroup;
 			children = (
-				49EDB1F42036208200F44319 /* ClientTests.swift */,
+				49EDB1F42036208200F44319 /* CustomerTests.swift */,
 				49EDB1F62036208200F44319 /* Info.plist */,
 			);
-			path = ClientTests;
+			path = CustomerTests;
 			sourceTree = "<group>";
 		};
 		49EDB1FC2036231B00F44319 /* Frameworks */ = {
@@ -171,19 +171,19 @@
 		4D3EDEF0203B183F003E9ABC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF323E203B712600C6C561 /* Client Scene */,
+				4DFF323E203B712600C6C561 /* Customer Scene */,
 				4DFF323F203B713400C6C561 /* Registration Scene */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		4DFF323E203B712600C6C561 /* Client Scene */ = {
+		4DFF323E203B712600C6C561 /* Customer Scene */ = {
 			isa = PBXGroup;
 			children = (
-				4D7D93EE203B1AC80044FFCF /* ClientCell.swift */,
-				4D3EDEF1203B1853003E9ABC /* ClientListViewController.swift */,
+				4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */,
+				4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */,
 			);
-			path = "Client Scene";
+			path = "Customer Scene";
 			sourceTree = "<group>";
 		};
 		4DFF323F203B713400C6C561 /* Registration Scene */ = {
@@ -298,14 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49423E7920348323009C3599 /* Client.swift in Sources */,
+				49423E7920348323009C3599 /* Customer.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
-				4DFD3208203B394400096BA8 /* LocalClients.swift in Sources */,
+				4DFD3208203B394400096BA8 /* LocalCustomers.swift in Sources */,
 				4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */,
-				4DFF3238203B3BCC00C6C561 /* ClientListViewModel.swift in Sources */,
-				4DFF323A203B5DDF00C6C561 /* ClientListState.swift in Sources */,
-				4D7D93EF203B1AC80044FFCF /* ClientCell.swift in Sources */,
-				4D3EDEF2203B1853003E9ABC /* ClientListViewController.swift in Sources */,
+				4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */,
+				4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */,
+				4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */,
+				4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EDB1F52036208200F44319 /* ClientTests.swift in Sources */,
+				49EDB1F52036208200F44319 /* CustomerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

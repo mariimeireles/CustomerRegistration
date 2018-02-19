@@ -1,5 +1,5 @@
 //
-//  ClientCell.swift
+//  CustomerCell.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles | Stone on 2/19/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClientCell: UITableViewCell {
+class CustomerCell: UITableViewCell {
     
     @IBOutlet weak var initialsLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!

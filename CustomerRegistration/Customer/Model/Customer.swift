@@ -1,5 +1,5 @@
 //
-//  ClientModel.swift
+//  CustomerModel.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles on 14/02/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Client {
+struct Customer {
     
     var ownerName: String
     var email: String
@@ -30,13 +30,6 @@ struct Client {
         let inicials = generateThreeInicials(name: companyName)
         self.companyInitials = inicials
     }
-    
-//    init(viewModel: ClientViewModel){
-//        self.companyName = viewModel.companyName
-//        self.ownerName = viewModel.ownerName
-//        let inicials = generateThreeInicials(name: companyName)
-//        self.companyInitials = inicials
-//    }
     
     private func generateThreeInicials(name: String) -> String {
         let inicials = name.components(separatedBy: " ").reduce("") { $0 + $1.first }

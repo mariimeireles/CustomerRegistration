@@ -1,5 +1,5 @@
 //
-//  ClientListState.swift
+//  CustomerListState.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles | Stone on 2/19/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum ClientListState {
+enum CustomerListState {
     
     case empty
     case populated

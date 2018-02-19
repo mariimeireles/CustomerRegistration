@@ -1,5 +1,5 @@
 //
-//  ClientTests.swift
+//  CustomerTests.swift
 //  ClientTests
 //
 //  Created by Mariana Meireles on 15/02/18.
@@ -10,22 +10,22 @@ import XCTest
 import Nimble
 @testable import CustomerRegistration
 
-class ClientTests: XCTestCase {
+class CustomerTests: XCTestCase {
     
-    private var clientUnderTest: ClientModel!
+    private var customerUnderTest: CustomerModel!
     
     override func setUp() {
         super.setUp()
-        clientUnderTest = ClientModel(company: "Stone", owner: "Mariana Ribeiro Meireles Gerisztein")
+        customerUnderTest = CustomerModel(company: "Stone", owner: "Mariana Ribeiro Meireles Gerisztein")
     }
     
     override func tearDown() {
-        clientUnderTest = nil
+        customerUnderTest = nil
         super.tearDown()
     }
     
     func test_shouldGenerate_threeInicials() {
-        let inicialsExpected = clientUnderTest.generateThreeInicials(name: clientUnderTest.owner)
+        let inicialsExpected = customerUnderTest.generateThreeInicials(name: customerUnderTest.owner)
         expect(inicialsExpected).to(match("MRM"))
     }
     

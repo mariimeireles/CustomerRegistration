@@ -1,5 +1,5 @@
 //
-//  ClientListViewController.swift
+//  CustomerListViewController.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles | Stone on 2/19/18.
@@ -8,28 +8,27 @@
 
 import UIKit
 
-class ClientListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CustomerListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    private var clientsListViewModel: ClientListViewModel!
-    private var localClients: LocalClients!
+    private var customersListViewModel: CustomerListViewModel!
+    private var localCustomers: LocalCustomers!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.localClients = LocalClients()
-        self.clientsListViewModel = ClientListViewModel(localClients: self.localClients)
-        clientState()
+        self.localCustomers = LocalCustomers()
+        self.customersListViewModel = CustomerListViewModel(localCustomers: self.localCustomers)
+        customerState()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
-    private func clientState(){
-        let clientListState: ClientListState = self.clientsListViewModel.clientListState
-        print(clientListState)
-        switch clientListState {
+    private func customerState(){
+        let customerListState: CustomerListState = self.customersListViewModel.customerListState
+        switch customerListState {
         case .empty:
             self.tableView.alpha = 0
         case .populated:
@@ -38,24 +37,24 @@ class ClientListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.clientsListViewModel.clientViewModels.count
+        return self.customersListViewModel.customerViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Client") as? ClientCell else { return UITableViewCell() }
-        let clientViewModel = self.clientsListViewModel.clientViewModels[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Customer") as? CustomerCell else { return UITableViewCell() }
+        let customerViewModel = self.customersListViewModel.customerViewModels[indexPath.row]
         
-        if let ownerText = clientViewModel.ownerName {
+        if let ownerText = customerViewModel.ownerName {
             cell.ownerNameLabel.text = ownerText
         }else{
             cell.ownerNameLabel.text = "-"
         }
-        if let companyText = clientViewModel.companyName {
+        if let companyText = customerViewModel.companyName {
             cell.companyNameLabel.text = companyText
         }else{
             cell.companyNameLabel.text = "-"
         }
-        if let initialsText = clientViewModel.companyInitials {
+        if let initialsText = customerViewModel.companyInitials {
             cell.initialsLabel.text = initialsText
         }else{
             cell.initialsLabel.text = "-"

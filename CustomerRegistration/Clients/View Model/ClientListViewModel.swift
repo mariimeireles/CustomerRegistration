@@ -10,6 +10,8 @@ import Foundation
 
 class ClientListViewModel {
     
+    
+    
     private (set) var clientsViewModel: [ClientModel] = [ClientModel]()
 
 }

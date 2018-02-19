@@ -93,6 +93,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8uR-Bm-Epz"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no registered cients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKl-bd-qK3" userLabel="warning Label">
+                                <rect key="frame" x="49" y="240" width="277" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="0mj-pB-MVX"/>
+                                    <constraint firstAttribute="height" constant="69" id="1dh-qn-25x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHA-zg-u6M">
                                 <rect key="frame" x="75" y="583" width="225" height="54"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -113,6 +123,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHA-zg-u6M" secondAttribute="trailing" constant="75" id="I57-HG-EAC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="srA-mS-evG" secondAttribute="trailing" id="J7e-JE-GGf"/>
                             <constraint firstItem="srA-mS-evG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XLv-Nv-CFg"/>
+                            <constraint firstItem="CKl-bd-qK3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="ZJM-H6-sQO"/>
+                            <constraint firstItem="CKl-bd-qK3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uJN-3M-LDg"/>
                             <constraint firstItem="YHA-zg-u6M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="yeK-qT-ws4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -120,6 +132,7 @@
                     <navigationItem key="navigationItem" title="Clients" id="YNd-5M-dl0"/>
                     <connections>
                         <outlet property="tableView" destination="srA-mS-evG" id="sLk-hQ-bHP"/>
+                        <outlet property="warningLabel" destination="CKl-bd-qK3" id="jFv-2V-3DQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -22,6 +22,7 @@
 		4D7D93EF203B1AC80044FFCF /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* ClientCell.swift */; };
 		4DFD3208203B394400096BA8 /* LocalClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* LocalClients.swift */; };
 		4DFF3238203B3BCC00C6C561 /* ClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* ClientListViewModel.swift */; };
+		4DFF323A203B5DDF00C6C561 /* ClientListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* ClientListState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		4D7D93EE203B1AC80044FFCF /* ClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
 		4DFD3207203B394400096BA8 /* LocalClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalClients.swift; sourceTree = "<group>"; };
 		4DFF3237203B3BCC00C6C561 /* ClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewModel.swift; sourceTree = "<group>"; };
+		4DFF3239203B5DDF00C6C561 /* ClientListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				49423E7820348323009C3599 /* Client.swift */,
 				4DFD3207203B394400096BA8 /* LocalClients.swift */,
+				4DFF3239203B5DDF00C6C561 /* ClientListState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
 				4DFD3208203B394400096BA8 /* LocalClients.swift in Sources */,
 				4DFF3238203B3BCC00C6C561 /* ClientListViewModel.swift in Sources */,
+				4DFF323A203B5DDF00C6C561 /* ClientListState.swift in Sources */,
 				4D7D93EF203B1AC80044FFCF /* ClientCell.swift in Sources */,
 				4D3EDEF2203B1853003E9ABC /* ClientListViewController.swift in Sources */,
 				49423E81203497B6009C3599 /* User.swift in Sources */,

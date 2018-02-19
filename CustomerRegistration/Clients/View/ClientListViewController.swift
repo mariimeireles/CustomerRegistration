@@ -10,6 +10,7 @@ import UIKit
 
 class ClientListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     private var clientsListViewModel: ClientListViewModel!
     private var localClients: LocalClients!
@@ -19,8 +20,20 @@ class ClientListViewController: UIViewController, UITableViewDataSource, UITable
         
         self.localClients = LocalClients()
         self.clientsListViewModel = ClientListViewModel(localClients: self.localClients)
+        clientState()
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+    
+    private func clientState(){
+        let clientListState: ClientListState = self.clientsListViewModel.clientListState
+        print(clientListState)
+        switch clientListState {
+        case .empty:
+            self.tableView.alpha = 0
+        case .populated:
+            self.warningLabel.alpha = 0
         }
     }
     

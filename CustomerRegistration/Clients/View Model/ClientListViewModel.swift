@@ -12,6 +12,7 @@ class ClientListViewModel {
     
     var clientViewModels: [ClientViewModel] = [ClientViewModel]()
     private var localClients: LocalClients
+    var clientListState: ClientListState!
     
     init(localClients: LocalClients) {
         self.localClients = localClients
@@ -20,10 +21,15 @@ class ClientListViewModel {
     
     func populateClients() {
         let clients = self.localClients.getAllClients()
-        self.clientViewModels = clients.map { client in
-            return ClientViewModel(client: client)
+        if clients.isEmpty{
+            print ("CLIENTS IS NIL")
+            self.clientListState = ClientListState(isPopulated: false)
+        } else {
+            self.clientViewModels = clients.map { client in
+                return ClientViewModel(client: client)
+            }
+            self.clientListState = ClientListState(isPopulated: true)
         }
-        
     }
     
 }

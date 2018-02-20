@@ -19,7 +19,7 @@
 		4D6EF1D9203C99F20073C1C2 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D6EF1DA203C99F90073C1C2 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
-		4DFD3208203B394400096BA8 /* LocalCustomers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* LocalCustomers.swift */; };
+		4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* InMemoryContacts.swift */; };
 		4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */; };
 		4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */; };
 		4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF323C203B711F00C6C561 /* RegisterViewController.swift */; };
@@ -64,7 +64,7 @@
 		4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		4D6EF1CF203C97DF0073C1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
-		4DFD3207203B394400096BA8 /* LocalCustomers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCustomers.swift; sourceTree = "<group>"; };
+		4DFD3207203B394400096BA8 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
 		4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListState.swift; sourceTree = "<group>"; };
 		4DFF323C203B711F00C6C561 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				49423E7820348323009C3599 /* Customer.swift */,
-				4DFD3207203B394400096BA8 /* LocalCustomers.swift */,
+				4DFD3207203B394400096BA8 /* InMemoryContacts.swift */,
 				4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */,
 			);
 			path = Model;
@@ -320,7 +320,7 @@
 			files = (
 				49423E7920348323009C3599 /* Customer.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
-				4DFD3208203B394400096BA8 /* LocalCustomers.swift in Sources */,
+				4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */,
 				4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */,
 				4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */,
 				4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */,

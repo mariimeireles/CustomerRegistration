@@ -13,13 +13,13 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     private var customersListViewModel: CustomerListViewModel!
-    private var localCustomers: LocalCustomers!
+    private var inMemoryContacts: InMemoryContacts!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.localCustomers = LocalCustomers()
-        self.customersListViewModel = CustomerListViewModel(localCustomers: self.localCustomers)
+        self.inMemoryContacts = InMemoryContacts()
+        self.customersListViewModel = CustomerListViewModel(inMemoryContacts: self.inMemoryContacts)
         customerState()
         DispatchQueue.main.async {
             self.tableView.reloadData()

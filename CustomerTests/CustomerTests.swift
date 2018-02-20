@@ -13,33 +13,33 @@ import Nimble
 class CustomerTests: XCTestCase {
     
     private var customerUnderTest: CustomerRow!
-    private var customerModel: Customer!
+    private var contact: Customer!
     
     override func setUp() {
         super.setUp()
-        customerModel = Customer(ownerName: "Mariana Ribeiro Meireles Gerisztein", email: "mariana.meireles@stone.com.br", telephone: "999952123", companyName: "Stone", CNPJ: "67076488000101", activeSince: Date(), isMei: true)
-        customerUnderTest = CustomerRow(customer: customerModel)
+        contact = Customer(ownerName: "Mariana Ribeiro Meireles Gerisztein", email: "mariana.meireles@stone.com.br", telephone: "999952123", companyName: "Stone", CNPJ: "67076488000101", activeSince: Date(), isMei: true)
+        customerUnderTest = CustomerRow(customer: contact)
     }
     
     override func tearDown() {
-        customerModel = nil
+        contact = nil
         customerUnderTest = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
     func test_shouldGenerate_threeInicials() {
-        let inicialsExpected = customerUnderTest.generateThreeInicials(name: customerModel.ownerName)
+        let inicialsExpected = customerUnderTest.generateThreeInicials(name: contact.ownerName)
         expect(inicialsExpected).to(match("MRM"))
     }
     
     func test_shouldntGenerate_fourInicials() {
-        let inicialsExpected = customerUnderTest.generateThreeInicials(name: customerModel.ownerName)
+        let inicialsExpected = customerUnderTest.generateThreeInicials(name: contact.ownerName)
         expect(inicialsExpected).notTo(match("MRMG"))
+    }
+    
+    func test_shouldTransformContact_intoCustomerModel() {
+        expect(self.contact.ownerName).to(match(customerUnderTest.ownerName))
+        expect(self.contact.companyName).to(match(customerUnderTest.companyName))
     }
     
 }

@@ -10,39 +10,54 @@ import Foundation
 
 class CustomerListViewModel {
     
-    var customerViewModels: [CustomerViewModel] = [CustomerViewModel]()
+    var customerRows: [CustomerRow] = [CustomerRow]()
     private var localCustomers: LocalCustomers
     var customerListState: CustomerListState!
     
     init(localCustomers: LocalCustomers) {
         self.localCustomers = localCustomers
-        populateCustomers()
+        customerRows = populateCustomers()!
     }
     
-    func populateCustomers() {
+    func populateCustomers() -> [CustomerRow]? {
         let customers = self.localCustomers.getAllCustomers()
+        var customerRow = [CustomerRow]()
         if customers.isEmpty{
             self.customerListState = CustomerListState(isPopulated: false)
         } else {
-            self.customerViewModels = customers.map { customer in
-                return CustomerViewModel(customer: customer)
+            customerRow = customers.map { customer in
+                return CustomerRow(customer: customer)
             }
             self.customerListState = CustomerListState(isPopulated: true)
         }
+        return customerRow
     }
     
 }
 
-class CustomerViewModel {
+class CustomerRow {
     
     var ownerName: String!
     var companyName: String!
-    var companyInitials: String!
+    var companyInitials: String?
     
     init(customer: Customer) {
         self.ownerName = customer.ownerName
         self.companyName = customer.companyName
-        self.companyInitials = customer.companyInitials
+        let inicials = generateThreeInicials(name: companyName)
+        self.companyInitials = inicials
     }
     
+    func generateThreeInicials(name: String) -> String {
+        let inicials = name.components(separatedBy: " ").reduce("") { $0 + $1.first }
+        let threeInicials = inicials.prefix(3)
+        return String(threeInicials)
+    }
+    
+}
+
+extension String {
+    public var first: String {
+        return String(self[startIndex])
+    }
 }

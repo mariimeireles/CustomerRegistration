@@ -37,24 +37,24 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.customersListViewModel.customerViewModels.count
+        return self.customersListViewModel.customerRows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Customer") as? CustomerCell else { return UITableViewCell() }
-        let customerViewModel = self.customersListViewModel.customerViewModels[indexPath.row]
+        let customerRow = self.customersListViewModel.customerRows[indexPath.row]
         
-        if let ownerText = customerViewModel.ownerName {
+        if let ownerText = customerRow.ownerName {
             cell.ownerNameLabel.text = ownerText
         }else{
             cell.ownerNameLabel.text = "-"
         }
-        if let companyText = customerViewModel.companyName {
+        if let companyText = customerRow.companyName {
             cell.companyNameLabel.text = companyText
         }else{
             cell.companyNameLabel.text = "-"
         }
-        if let initialsText = customerViewModel.companyInitials {
+        if let initialsText = customerRow.companyInitials {
             cell.initialsLabel.text = initialsText
         }else{
             cell.initialsLabel.text = "-"

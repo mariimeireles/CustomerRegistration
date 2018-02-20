@@ -11,16 +11,16 @@ import Foundation
 class CustomerListViewModel {
     
     var customerRows: [CustomerRow] = [CustomerRow]()
-    private var localCustomers: LocalCustomers
+    private var inMemoryContacts: InMemoryContacts
     var customerListState: CustomerListState!
     
-    init(localCustomers: LocalCustomers) {
-        self.localCustomers = localCustomers
-        customerRows = populateCustomers()!
+    init(inMemoryContacts: InMemoryContacts) {
+        self.inMemoryContacts = inMemoryContacts
+        customerRows = populateRows()!
     }
     
-    func populateCustomers() -> [CustomerRow]? {
-        let customers = self.localCustomers.getAllCustomers()
+    func populateRows() -> [CustomerRow]? {
+        let customers = self.inMemoryContacts.retrieveContacts()
         var customerRow = [CustomerRow]()
         if customers.isEmpty{
             self.customerListState = CustomerListState(isPopulated: false)

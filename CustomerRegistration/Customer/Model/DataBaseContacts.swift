@@ -7,13 +7,13 @@
 //
 
 import Foundation
-
+import CoreData
 
 class DataBaseContacts: RetrieveContacts {
     
     func fetchCustomers() -> [Customer] {
         var customers = [Customer]()
-
+        guard let appDelegate = UIAppl
         
         return customers
     }

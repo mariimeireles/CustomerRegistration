@@ -114,6 +114,7 @@
 				4D2CCC58203DD7CB00802D31 /* DataBaseContacts.swift */,
 				4D2CCC56203DC1ED00802D31 /* RetrieveContacts.swift */,
 				4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */,
+				4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,7 +151,6 @@
 			children = (
 				49423E76203482FA009C3599 /* Customer */,
 				49CF814A20347FB20017E1FA /* AppDelegate.swift */,
-				4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */,
 				49CF814E20347FB20017E1FA /* Main.storyboard */,
 				49CF815120347FB20017E1FA /* Assets.xcassets */,
 				49CF815320347FB20017E1FA /* LaunchScreen.storyboard */,

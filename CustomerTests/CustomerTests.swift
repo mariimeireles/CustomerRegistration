@@ -17,7 +17,7 @@ class CustomerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        contact = Customer(ownerName: "Mariana Ribeiro Meireles Gerisztein", email: "mariana.meireles@stone.com.br", telephone: "999952123", companyName: "Stone", CNPJ: "67076488000101", activeSince: Date(), isMei: true)
+        contact = Customer(ownerName: "Mariana Ribeiro Meireles Gerisztein", email: "mariana.meireles@stone.com.br", telephone: "999952123", companyName: "Stone", cnpj: "67076488000101", activeSince: Date(), isMei: true)
         customerUnderTest = CustomerRow(customer: contact)
     }
     

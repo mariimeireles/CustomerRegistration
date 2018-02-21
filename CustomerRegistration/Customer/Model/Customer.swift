@@ -7,23 +7,25 @@
 //
 
 import Foundation
+import CoreData
 
-struct Customer {
+class Customer: NSManagedObject {
     
-    var ownerName: String
-    var email: String
-    var telephone: String
-    var companyName: String
-    var CNPJ: String
-    var activeSince: Date
-    var isMei: Bool
+    var ownerName: String?
+    var email: String?
+    var telephone: String?
+    var companyName: String?
+    var cnpj: String?
+    var activeSince: Date?
+    var isMei: Bool?
     
-    init(ownerName: String, email: String, telephone: String, companyName: String, CNPJ: String, activeSince: Date, isMei: Bool) {
+    convenience init(ownerName: String, email: String, telephone: String, companyName: String, cnpj: String, activeSince: Date, isMei: Bool) {
+        self.init()
         self.ownerName = ownerName
         self.email = email
         self.telephone = telephone
         self.companyName = companyName
-        self.CNPJ = CNPJ
+        self.cnpj = cnpj
         self.activeSince = activeSince
         self.isMei = isMei
     }

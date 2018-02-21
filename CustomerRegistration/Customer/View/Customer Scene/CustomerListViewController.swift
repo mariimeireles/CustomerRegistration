@@ -15,12 +15,13 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     private var customersListViewModel: CustomerListViewModel!
     private var inMemoryContacts: InMemoryContacts!
+    private var dataBaseContacts: DataBaseContacts!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.inMemoryContacts = InMemoryContacts()
-        self.customersListViewModel = CustomerListViewModel(fetcher: self.inMemoryContacts)
+        self.dataBaseContacts = DataBaseContacts()
+        self.customersListViewModel = CustomerListViewModel(fetcher: self.dataBaseContacts)
         customerState()
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -35,36 +36,6 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
         case .populated:
             self.warningLabel.alpha = 0
         }
-    }
-    
-    //MARK: TEST
-    @IBAction func addCustomerButton(_ sender: Any) {
-        saveToCoreData()
-    }
-    
-    //MARK: TEST
-    func saveToCoreData(){
-        let customer = Customer(ownerName: "Mariana Meireles", email: "mariana.meireles@stone.com.br", telephone: "999952123", companyName: "Stone", cnpj: "85814550000105", activeSince: Date(), isMei: true)
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
-        let user = NSManagedObject(entity: entity!, insertInto: managedContext)
-        user.setValue(customer.ownerName, forKey: "ownerName")
-        user.setValue(customer.email, forKey: "email")
-        user.setValue(customer.telephone, forKey: "telephone")
-        user.setValue(customer.companyName, forKey: "companyName")
-        user.setValue(customer.cnpj, forKey: "cnpj")
-        user.setValue(customer.activeSince, forKey: "activeSince")
-        user.setValue(customer.isMei, forKey: "isMei")
-        
-        do {
-            try managedContext.save()
-            print ("SAVED USER: \(user)")
-        } catch let error as NSError {
-            print ("Failed to save an user, \(error)")
-        }
-        
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

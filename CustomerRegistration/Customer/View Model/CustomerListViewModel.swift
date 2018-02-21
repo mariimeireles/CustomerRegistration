@@ -41,7 +41,7 @@ class CustomerRow {
     var companyName: String!
     var companyInitials: String?
     
-    init(customer: Customer) {
+    init(customer: User) {
         self.ownerName = customer.ownerName
         self.companyName = customer.companyName
         let inicials = generateThreeInicials(name: companyName)
@@ -61,3 +61,4 @@ extension String {
         return String(self[startIndex])
     }
 }
+

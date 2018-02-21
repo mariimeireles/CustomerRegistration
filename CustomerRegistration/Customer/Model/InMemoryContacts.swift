@@ -10,14 +10,19 @@ import Foundation
 
 class InMemoryContacts: RetrieveContacts {
     
-    func fetchCustomers() -> [Customer] {
-        var customers = [Customer]()
-        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false))
-        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false))
-        customers.append(Customer(ownerName: "Evan Spiegel", email: "evan@spiegel.com", telephone: "123456789", companyName: "SnapChat", cnpj: "87431294000194", activeSince: Date(), isMei: true))
-        customers.append(Customer(ownerName: "Jack Dorsey‎", email: "jack@dorsey‎.com", telephone: "123456789", companyName: "Twitter", cnpj: "18625995000141", activeSince: Date(), isMei: true))
-
-        return customers
+    func fetchCustomers() -> [User] {
+        var users = [User]()
+        let user = User(context: PersistenceService.context)
+        user.ownerName = "Mariana Meireles"
+        user.email = "mariana.meireles@stone.com.br"
+        user.telephone = "999952123"
+        user.companyName = "Stone"
+        user.cnpj = "85814550000105"
+        user.activeSince = Date() as NSDate
+        user.isMei = true
+        users.append(user)
+        
+        return users
     }
     
 }

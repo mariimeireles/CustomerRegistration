@@ -19,7 +19,7 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         
         self.inMemoryContacts = InMemoryContacts()
-        self.customersListViewModel = CustomerListViewModel(inMemoryContacts: self.inMemoryContacts)
+        self.customersListViewModel = CustomerListViewModel(fetcher: self.inMemoryContacts)
         customerState()
         DispatchQueue.main.async {
             self.tableView.reloadData()

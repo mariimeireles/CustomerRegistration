@@ -8,9 +8,9 @@
 
 import Foundation
 
-class InMemoryContacts {
+class InMemoryContacts: RetrieveContacts {
     
-    func retrieveContacts() -> [Customer] {
+    func fetchCustomers() -> [Customer] {
         var customers = [Customer]()
         customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", CNPJ: "85814550000105", activeSince: Date(), isMei: false))
         customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", CNPJ: "85814550000105", activeSince: Date(), isMei: false))

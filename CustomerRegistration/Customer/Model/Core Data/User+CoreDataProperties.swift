@@ -10,13 +10,12 @@
 import Foundation
 import CoreData
 
-
 extension User {
-
+    
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
     }
-
+    
     @NSManaged public var activeSince: NSDate?
     @NSManaged public var cnpj: String?
     @NSManaged public var companyName: String?
@@ -24,5 +23,5 @@ extension User {
     @NSManaged public var isMei: Bool
     @NSManaged public var ownerName: String?
     @NSManaged public var telephone: String?
-
+    
 }

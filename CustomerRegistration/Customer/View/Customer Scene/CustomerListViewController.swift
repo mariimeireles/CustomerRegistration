@@ -20,6 +20,7 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.inMemoryContacts = InMemoryContacts()
         self.dataBaseContacts = DataBaseContacts()
         self.customersListViewModel = CustomerListViewModel(fetcher: self.dataBaseContacts)
         customerState()

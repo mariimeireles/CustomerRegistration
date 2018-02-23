@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import CoreData
 
-class Customer: NSManagedObject {
+class Customer {
     
     var ownerName: String?
     var email: String?
@@ -28,6 +27,17 @@ class Customer: NSManagedObject {
         self.cnpj = cnpj
         self.activeSince = activeSince
         self.isMei = isMei
+    }
+    
+    convenience init (translatedCustomer: UserTranslater) {
+        self.init()
+        self.ownerName = translatedCustomer.ownerName
+        self.email = translatedCustomer.email
+        self.telephone = translatedCustomer.telephone
+        self.companyName = translatedCustomer.companyName
+        self.cnpj = translatedCustomer.cnpj
+        self.activeSince = translatedCustomer.activeSince
+        self.isMei = translatedCustomer.isMei
     }
     
 }

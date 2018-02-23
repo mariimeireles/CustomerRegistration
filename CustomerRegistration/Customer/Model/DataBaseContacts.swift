@@ -11,17 +11,16 @@ import CoreData
 
 class DataBaseContacts: RetrieveContacts {
     
-    func fetchCustomers() -> [User] {
-        var users = [User]()
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        do {
-            let user = try PersistenceService.context.fetch(fetchRequest)
-            users = user
-        } catch let error as NSError {
-            print ("Failed to save an user, \(error)")
+    let coreDataFetcher = CoreDataFetcher()
+    
+    func fetchCustomers() -> [Customer] {
+        var customers = [Customer]()
+        let users = coreDataFetcher.fetchUsers()
+        for user in users {
+            let fetchedUser = UserTranslater(managedCustomer: user)
+            customers.append(Customer(translatedCustomer: fetchedUser))
         }
-        
-        return users
+        return customers
     }
     
 }

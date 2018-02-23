@@ -10,5 +10,5 @@ import Foundation
 
 protocol RetrieveContacts {
     
-    func fetchCustomers() -> [User]
+    func fetchCustomers() -> [Customer]
 }

@@ -21,5 +21,5 @@ enum CustomerListState {
             self = .empty
         }
     }
-
+    
 }

@@ -11,7 +11,7 @@ import Foundation
 class InMemoryHeadlines: RetrieveHeadlines {
     
     func fetchHeadlines() -> Headline {
-        var headLine = Headline(Headline(ownerName: "Owner Name", email: "Email", telephone: "Phone for contact", companyName: "Company Name", cnpj: "CNPJ", activeSince: "Active since", pickDate: "choose", isMei: "Is MEI?")
+        let headLine = Headline(ownerName: "Owner Name", email: "Email", telephone: "Phone for contact", companyName: "Company Name", cnpj: "CNPJ", activeSince: "Active since", pickDate: "choose", isMei: "Is MEI?")
         
         return headLine
     }

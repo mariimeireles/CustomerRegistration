@@ -23,6 +23,10 @@
 		4D6EF1D6203C99AF0073C1C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
 		4D6EF1D9203C99F20073C1C2 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D6EF1DA203C99F90073C1C2 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D71E3C92044929000C51054 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E3C82044929000C51054 /* NameValidator.swift */; };
+		4D71E3CB204492A600C51054 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E3CA204492A600C51054 /* EmailValidator.swift */; };
+		4D71E3CD204492BE00C51054 /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E3CC204492BE00C51054 /* PhoneValidator.swift */; };
+		4D71E3D12044A44500C51054 /* CompanyNameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E3D02044A44500C51054 /* CompanyNameValidator.swift */; };
 		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
 		4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4B203E097B0045E885 /* PersistenceService.swift */; };
 		4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */; };
@@ -76,6 +80,10 @@
 		4D6EF1CB203C97DF0073C1C2 /* CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		4D6EF1CF203C97DF0073C1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D71E3C82044929000C51054 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
+		4D71E3CA204492A600C51054 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		4D71E3CC204492BE00C51054 /* PhoneValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		4D71E3D02044A44500C51054 /* CompanyNameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNameValidator.swift; sourceTree = "<group>"; };
 		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
 		4DC33B4B203E097B0045E885 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				49423E76203482FA009C3599 /* Customer */,
+				4D71E3C52044926100C51054 /* Registration */,
 				49CF814A20347FB20017E1FA /* AppDelegate.swift */,
 				49CF814E20347FB20017E1FA /* Main.storyboard */,
 				49CF815120347FB20017E1FA /* Assets.xcassets */,
@@ -182,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				4DFF323E203B712600C6C561 /* Customer Scene */,
-				4DFF323F203B713400C6C561 /* Registration Scene */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +202,26 @@
 				4D6EF1CF203C97DF0073C1C2 /* Info.plist */,
 			);
 			path = CustomerTests;
+			sourceTree = "<group>";
+		};
+		4D71E3C52044926100C51054 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				4D71E3C62044927500C51054 /* Validators */,
+				4DFF323F203B713400C6C561 /* Registration Scene */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		4D71E3C62044927500C51054 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				4D71E3C82044929000C51054 /* NameValidator.swift */,
+				4D71E3CA204492A600C51054 /* EmailValidator.swift */,
+				4D71E3CC204492BE00C51054 /* PhoneValidator.swift */,
+				4D71E3D02044A44500C51054 /* CompanyNameValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		4DC33B4A203E09470045E885 /* Core Data */ = {
@@ -361,11 +389,15 @@
 				4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */,
 				4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */,
 				4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */,
+				4D71E3D12044A44500C51054 /* CompanyNameValidator.swift in Sources */,
+				4D71E3CB204492A600C51054 /* EmailValidator.swift in Sources */,
+				4D71E3CD204492BE00C51054 /* PhoneValidator.swift in Sources */,
 				4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */,
 				4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */,
 				4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */,
 				4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */,
 				4D2AC13D2040C0F400F5F330 /* UserTranslater.swift in Sources */,
+				4D71E3C92044929000C51054 /* NameValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

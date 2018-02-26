@@ -53,6 +53,9 @@
 		4D71E42F2044B03A00C51054 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
 		4D71E4312044B04A00C51054 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D71E4322044B04E00C51054 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D71E4362044B9CF00C51054 /* RetrieveHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E4352044B9CF00C51054 /* RetrieveHeadlines.swift */; };
+		4D71E4382044BA0300C51054 /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E4372044BA0300C51054 /* InMemoryHeadlines.swift */; };
+		4D71E43A2044BA7300C51054 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E4392044BA7300C51054 /* Headline.swift */; };
 		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
 		4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4B203E097B0045E885 /* PersistenceService.swift */; };
 		4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */; };
@@ -216,6 +219,9 @@
 		4D71E4152044AFF300C51054 /* CNPJValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CNPJValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D71E4172044AFF300C51054 /* CNPJValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJValidatorTests.swift; sourceTree = "<group>"; };
 		4D71E4192044AFF300C51054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D71E4352044B9CF00C51054 /* RetrieveHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlines.swift; sourceTree = "<group>"; };
+		4D71E4372044BA0300C51054 /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
+		4D71E4392044BA7300C51054 /* Headline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
 		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
 		4DC33B4B203E097B0045E885 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -377,7 +383,8 @@
 		4D3EDEF0203B183F003E9ABC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF323E203B712600C6C561 /* Customer Scene */,
+				4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */,
+				4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,8 +401,9 @@
 		4D71E3C52044926100C51054 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				4D71E4332044B98800C51054 /* Model */,
 				4D71E3C62044927500C51054 /* Validators */,
-				4DFF323F203B713400C6C561 /* Registration Scene */,
+				4D71E4342044B99700C51054 /* View */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -457,6 +465,32 @@
 			path = CNPJValidatorTests;
 			sourceTree = "<group>";
 		};
+		4D71E4332044B98800C51054 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D71E43B2044BB2100C51054 /* Headline */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D71E4342044B99700C51054 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DFF323C203B711F00C6C561 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D71E43B2044BB2100C51054 /* Headline */ = {
+			isa = PBXGroup;
+			children = (
+				4D71E4392044BA7300C51054 /* Headline.swift */,
+				4D71E4352044B9CF00C51054 /* RetrieveHeadlines.swift */,
+				4D71E4372044BA0300C51054 /* InMemoryHeadlines.swift */,
+			);
+			path = Headline;
+			sourceTree = "<group>";
+		};
 		4DC33B4A203E09470045E885 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,23 +502,6 @@
 				4DC33B4B203E097B0045E885 /* PersistenceService.swift */,
 			);
 			path = "Core Data";
-			sourceTree = "<group>";
-		};
-		4DFF323E203B712600C6C561 /* Customer Scene */ = {
-			isa = PBXGroup;
-			children = (
-				4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */,
-				4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */,
-			);
-			path = "Customer Scene";
-			sourceTree = "<group>";
-		};
-		4DFF323F203B713400C6C561 /* Registration Scene */ = {
-			isa = PBXGroup;
-			children = (
-				4DFF323C203B711F00C6C561 /* RegisterViewController.swift */,
-			);
-			path = "Registration Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -773,6 +790,7 @@
 			files = (
 				49423E7920348323009C3599 /* Customer.swift in Sources */,
 				4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */,
+				4D71E4382044BA0300C51054 /* InMemoryHeadlines.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
 				4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */,
 				4D71E3E62044A8CE00C51054 /* CNPJValidator.swift in Sources */,
@@ -781,7 +799,9 @@
 				4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */,
 				4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */,
 				4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */,
+				4D71E43A2044BA7300C51054 /* Headline.swift in Sources */,
 				4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */,
+				4D71E4362044B9CF00C51054 /* RetrieveHeadlines.swift in Sources */,
 				4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */,
 				4D71E3D12044A44500C51054 /* CompanyNameValidator.swift in Sources */,
 				4D71E3CB204492A600C51054 /* EmailValidator.swift in Sources */,

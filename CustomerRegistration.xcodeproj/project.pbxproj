@@ -60,6 +60,11 @@
 		4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4B203E097B0045E885 /* PersistenceService.swift */; };
 		4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */; };
 		4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */; };
+		4DC8ABB32044BF52003244E5 /* HeadlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8ABB22044BF52003244E5 /* HeadlineTests.swift */; };
+		4DC8ABBA2044BF61003244E5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
+		4DC8ABBB2044BF61003244E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
+		4DC8ABBD2044BF6B003244E5 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4DC8ABBE2044BF6E003244E5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* InMemoryContacts.swift */; };
 		4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */; };
 		4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */; };
@@ -103,6 +108,13 @@
 			remoteInfo = CustomerRegistration;
 		};
 		4D71E41A2044AFF300C51054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49CF813F20347FB20017E1FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49CF814620347FB20017E1FA;
+			remoteInfo = CustomerRegistration;
+		};
+		4DC8ABB52044BF52003244E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49CF813F20347FB20017E1FA /* Project object */;
 			proxyType = 1;
@@ -178,6 +190,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DC8ABBC2044BF63003244E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4DC8ABBE2044BF6E003244E5 /* Nimble.framework in CopyFiles */,
+				4DC8ABBD2044BF6B003244E5 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -226,6 +249,9 @@
 		4DC33B4B203E097B0045E885 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4DC8ABB02044BF52003244E5 /* HeadlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC8ABB22044BF52003244E5 /* HeadlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTests.swift; sourceTree = "<group>"; };
+		4DC8ABB42044BF52003244E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DFD3207203B394400096BA8 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
 		4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListState.swift; sourceTree = "<group>"; };
@@ -294,6 +320,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DC8ABAD2044BF52003244E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC8ABBA2044BF61003244E5 /* Nimble.framework in Frameworks */,
+				4DC8ABBB2044BF61003244E5 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -338,6 +373,7 @@
 				4D71E3FA2044AFD600C51054 /* PhoneValidatorTests */,
 				4D71E4082044AFE500C51054 /* CompanyNameValidatorTests */,
 				4D71E4162044AFF300C51054 /* CNPJValidatorTests */,
+				4DC8ABB12044BF52003244E5 /* HeadlineTests */,
 				49CF814820347FB20017E1FA /* Products */,
 				49EDB1FC2036231B00F44319 /* Frameworks */,
 			);
@@ -353,6 +389,7 @@
 				4D71E3F92044AFD600C51054 /* PhoneValidatorTests.xctest */,
 				4D71E4072044AFE400C51054 /* CompanyNameValidatorTests.xctest */,
 				4D71E4152044AFF300C51054 /* CNPJValidatorTests.xctest */,
+				4DC8ABB02044BF52003244E5 /* HeadlineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -504,6 +541,15 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		4DC8ABB12044BF52003244E5 /* HeadlineTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DC8ABB22044BF52003244E5 /* HeadlineTests.swift */,
+				4DC8ABB42044BF52003244E5 /* Info.plist */,
+			);
+			path = HeadlineTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -639,6 +685,25 @@
 			productReference = 4D71E4152044AFF300C51054 /* CNPJValidatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4DC8ABAF2044BF52003244E5 /* HeadlineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC8ABB92044BF52003244E5 /* Build configuration list for PBXNativeTarget "HeadlineTests" */;
+			buildPhases = (
+				4DC8ABAC2044BF52003244E5 /* Sources */,
+				4DC8ABAD2044BF52003244E5 /* Frameworks */,
+				4DC8ABAE2044BF52003244E5 /* Resources */,
+				4DC8ABBC2044BF63003244E5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DC8ABB62044BF52003244E5 /* PBXTargetDependency */,
+			);
+			name = HeadlineTests;
+			productName = HeadlineTests;
+			productReference = 4DC8ABB02044BF52003244E5 /* HeadlineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -683,6 +748,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 49CF814620347FB20017E1FA;
 					};
+					4DC8ABAF2044BF52003244E5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49CF814620347FB20017E1FA;
+					};
 				};
 			};
 			buildConfigurationList = 49CF814220347FB20017E1FA /* Build configuration list for PBXProject "CustomerRegistration" */;
@@ -705,6 +775,7 @@
 				4D71E3F82044AFD600C51054 /* PhoneValidatorTests */,
 				4D71E4062044AFE400C51054 /* CompanyNameValidatorTests */,
 				4D71E4142044AFF300C51054 /* CNPJValidatorTests */,
+				4DC8ABAF2044BF52003244E5 /* HeadlineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -756,6 +827,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D71E4132044AFF300C51054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC8ABAE2044BF52003244E5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -863,6 +941,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DC8ABAC2044BF52003244E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC8ABB32044BF52003244E5 /* HeadlineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -895,6 +981,11 @@
 			isa = PBXTargetDependency;
 			target = 49CF814620347FB20017E1FA /* CustomerRegistration */;
 			targetProxy = 4D71E41A2044AFF300C51054 /* PBXContainerItemProxy */;
+		};
+		4DC8ABB62044BF52003244E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49CF814620347FB20017E1FA /* CustomerRegistration */;
+			targetProxy = 4DC8ABB52044BF52003244E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1307,6 +1398,48 @@
 			};
 			name = Release;
 		};
+		4DC8ABB72044BF52003244E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HeadlineTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.HeadlineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomerRegistration.app/CustomerRegistration";
+			};
+			name = Debug;
+		};
+		4DC8ABB82044BF52003244E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HeadlineTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.HeadlineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomerRegistration.app/CustomerRegistration";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1378,6 +1511,15 @@
 			buildConfigurations = (
 				4D71E41D2044AFF300C51054 /* Debug */,
 				4D71E41E2044AFF300C51054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC8ABB92044BF52003244E5 /* Build configuration list for PBXNativeTarget "HeadlineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC8ABB72044BF52003244E5 /* Debug */,
+				4DC8ABB82044BF52003244E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

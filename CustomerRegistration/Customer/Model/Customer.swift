@@ -8,24 +8,36 @@
 
 import Foundation
 
-struct Customer {
+class Customer {
     
-    var ownerName: String
-    var email: String
-    var telephone: String
-    var companyName: String
-    var CNPJ: String
-    var activeSince: Date
-    var isMei: Bool
+    var ownerName: String?
+    var email: String?
+    var telephone: String?
+    var companyName: String?
+    var cnpj: String?
+    var activeSince: Date?
+    var isMei: Bool?
     
-    init(ownerName: String, email: String, telephone: String, companyName: String, CNPJ: String, activeSince: Date, isMei: Bool) {
+    convenience init(ownerName: String, email: String, telephone: String, companyName: String, cnpj: String, activeSince: Date, isMei: Bool) {
+        self.init()
         self.ownerName = ownerName
         self.email = email
         self.telephone = telephone
         self.companyName = companyName
-        self.CNPJ = CNPJ
+        self.cnpj = cnpj
         self.activeSince = activeSince
         self.isMei = isMei
+    }
+    
+    convenience init (translatedCustomer: UserTranslater) {
+        self.init()
+        self.ownerName = translatedCustomer.ownerName
+        self.email = translatedCustomer.email
+        self.telephone = translatedCustomer.telephone
+        self.companyName = translatedCustomer.companyName
+        self.cnpj = translatedCustomer.cnpj
+        self.activeSince = translatedCustomer.activeSince
+        self.isMei = translatedCustomer.isMei
     }
     
 }

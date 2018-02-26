@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CustomerListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -14,12 +15,14 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     private var customersListViewModel: CustomerListViewModel!
     private var inMemoryContacts: InMemoryContacts!
+    private var dataBaseContacts: DataBaseContacts!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.inMemoryContacts = InMemoryContacts()
-        self.customersListViewModel = CustomerListViewModel(fetcher: self.inMemoryContacts)
+        self.dataBaseContacts = DataBaseContacts()
+        self.customersListViewModel = CustomerListViewModel(fetcher: self.dataBaseContacts)
         customerState()
         DispatchQueue.main.async {
             self.tableView.reloadData()

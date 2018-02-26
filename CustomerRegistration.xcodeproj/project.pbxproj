@@ -12,7 +12,11 @@
 		49CF815020347FB20017E1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CF814E20347FB20017E1FA /* Main.storyboard */; };
 		49CF815220347FB20017E1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CF815120347FB20017E1FA /* Assets.xcassets */; };
 		49CF815520347FB20017E1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CF815320347FB20017E1FA /* LaunchScreen.storyboard */; };
+		4D2AC13D2040C0F400F5F330 /* UserTranslater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2AC13C2040C0F400F5F330 /* UserTranslater.swift */; };
+		4D2AC13F2040C10E00F5F330 /* CoreDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2AC13E2040C10E00F5F330 /* CoreDataFetcher.swift */; };
 		4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CCC56203DC1ED00802D31 /* RetrieveContacts.swift */; };
+		4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CCC58203DD7CB00802D31 /* DataBaseContacts.swift */; };
+		4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */; };
 		4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */; };
 		4D6EF1CE203C97DF0073C1C2 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */; };
 		4D6EF1D5203C99AC0073C1C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
@@ -20,6 +24,9 @@
 		4D6EF1D9203C99F20073C1C2 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D6EF1DA203C99F90073C1C2 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
+		4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4B203E097B0045E885 /* PersistenceService.swift */; };
+		4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */; };
+		4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */; };
 		4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* InMemoryContacts.swift */; };
 		4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */; };
 		4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */; };
@@ -60,12 +67,19 @@
 		49CF815620347FB20017E1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49EDB1FD2036231C00F44319 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		49EDB1FE2036231C00F44319 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		4D2AC13C2040C0F400F5F330 /* UserTranslater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTranslater.swift; sourceTree = "<group>"; };
+		4D2AC13E2040C10E00F5F330 /* CoreDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetcher.swift; sourceTree = "<group>"; };
 		4D2CCC56203DC1ED00802D31 /* RetrieveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveContacts.swift; sourceTree = "<group>"; };
+		4D2CCC58203DD7CB00802D31 /* DataBaseContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseContacts.swift; sourceTree = "<group>"; };
+		4D2CCCB8203DDE0B00802D31 /* myMainProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myMainProject.xcdatamodel; sourceTree = "<group>"; };
 		4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		4D6EF1CB203C97DF0073C1C2 /* CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		4D6EF1CF203C97DF0073C1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
+		4DC33B4B203E097B0045E885 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4DFD3207203B394400096BA8 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
 		4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListState.swift; sourceTree = "<group>"; };
@@ -106,7 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				49423E7820348323009C3599 /* Customer.swift */,
+				4DC33B4A203E09470045E885 /* Core Data */,
 				4DFD3207203B394400096BA8 /* InMemoryContacts.swift */,
+				4D2CCC58203DD7CB00802D31 /* DataBaseContacts.swift */,
 				4D2CCC56203DC1ED00802D31 /* RetrieveContacts.swift */,
 				4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */,
 			);
@@ -178,6 +194,19 @@
 				4D6EF1CF203C97DF0073C1C2 /* Info.plist */,
 			);
 			path = CustomerTests;
+			sourceTree = "<group>";
+		};
+		4DC33B4A203E09470045E885 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				4D2AC13C2040C0F400F5F330 /* UserTranslater.swift */,
+				4D2AC13E2040C10E00F5F330 /* CoreDataFetcher.swift */,
+				4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */,
+				4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */,
+				4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */,
+				4DC33B4B203E097B0045E885 /* PersistenceService.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		4DFF323E203B712600C6C561 /* Customer Scene */ = {
@@ -322,14 +351,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				49423E7920348323009C3599 /* Customer.swift in Sources */,
+				4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
+				4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */,
+				4D2AC13F2040C10E00F5F330 /* CoreDataFetcher.swift in Sources */,
 				4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */,
 				4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */,
 				4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */,
+				4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */,
+				4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */,
 				4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */,
+				4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */,
 				4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */,
 				4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */,
 				4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */,
+				4D2AC13D2040C0F400F5F330 /* UserTranslater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +617,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D2CCCB8203DDE0B00802D31 /* myMainProject.xcdatamodel */,
+			);
+			currentVersion = 4D2CCCB8203DDE0B00802D31 /* myMainProject.xcdatamodel */;
+			path = CustomerRegistration.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49CF813F20347FB20017E1FA /* Project object */;
 }

@@ -17,10 +17,6 @@ class CompanyNameValidator {
             return false
         }
 
-        if inputCompany.hasSuffix(" ") || inputCompany.hasPrefix(" ") {
-            return false
-        }
-
         return true
     }
     

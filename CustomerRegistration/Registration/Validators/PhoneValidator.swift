@@ -14,7 +14,7 @@ class PhoneValidator {
     
     func validate(inputNumber: String) -> Bool {
         
-        let formattedString = inputNumber.replacingOccurrences(of: "[ ()-,]", with: "", options: [.regularExpression])
+        let formattedString = inputNumber.replacingOccurrences(of: "[ ()-]", with: "", options: [.regularExpression])
         if formattedString.count < 10 || formattedString.count > 11 {
             return false
         }

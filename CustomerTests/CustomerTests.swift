@@ -28,12 +28,12 @@ class CustomerTests: XCTestCase {
     }
     
     func test_shouldGenerate_threeInicials() {
-        let inicialsExpected = customerUnderTest.generateThreeInicials(name: contact.ownerName)
+        let inicialsExpected = customerUnderTest.generateThreeInicials(name: contact.ownerName!)
         expect(inicialsExpected).to(match("MRM"))
     }
     
     func test_shouldntGenerate_fourInicials() {
-        let inicialsExpected = customerUnderTest.generateThreeInicials(name: contact.ownerName)
+        let inicialsExpected = customerUnderTest.generateThreeInicials(name: contact.ownerName!)
         expect(inicialsExpected).notTo(match("MRMG"))
     }
     

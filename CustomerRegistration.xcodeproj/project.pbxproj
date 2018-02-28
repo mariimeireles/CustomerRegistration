@@ -55,7 +55,14 @@
 		4D71E4322044B04E00C51054 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D71E4362044B9CF00C51054 /* RetrieveHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E4352044B9CF00C51054 /* RetrieveHeadlines.swift */; };
 		4D71E4382044BA0300C51054 /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E4372044BA0300C51054 /* InMemoryHeadlines.swift */; };
-		4D71E43A2044BA7300C51054 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71E4392044BA7300C51054 /* Headline.swift */; };
+		4D762C242046EB140021D01C /* RegistrationCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D762C232046EB140021D01C /* RegistrationCellProtocol.swift */; };
+		4D762C262046EB3A0021D01C /* RegistrationCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D762C252046EB3A0021D01C /* RegistrationCellType.swift */; };
+		4D762C292046EBDC0021D01C /* RegistrationTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D762C282046EBDC0021D01C /* RegistrationTextFieldType.swift */; };
+		4D762C2B2046ECD40021D01C /* RegistrationTextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D762C2A2046ECD40021D01C /* RegistrationTextFieldModel.swift */; };
+		4D762C2D2046F6500021D01C /* RegistrationPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D762C2C2046F6500021D01C /* RegistrationPickerModel.swift */; };
+		4D762C2F2046F6AD0021D01C /* RegistrationSwitchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D762C2E2046F6AD0021D01C /* RegistrationSwitchModel.swift */; };
+		4D7650172047056000E5EA2F /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7650162047056000E5EA2F /* PickerCell.swift */; };
+		4D765019204709F400E5EA2F /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D765018204709F400E5EA2F /* SwitchCell.swift */; };
 		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
 		4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4B203E097B0045E885 /* PersistenceService.swift */; };
 		4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */; };
@@ -71,6 +78,7 @@
 		4DC8ABD12045D570003244E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
 		4DC8ABD32045D57B003244E5 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DC8ABD42045D580003244E5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4DC8ABD6204601AD003244E5 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8ABD5204601AD003244E5 /* TextFieldCell.swift */; };
 		4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD3207203B394400096BA8 /* InMemoryContacts.swift */; };
 		4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */; };
 		4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */; };
@@ -268,7 +276,14 @@
 		4D71E4192044AFF300C51054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D71E4352044B9CF00C51054 /* RetrieveHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlines.swift; sourceTree = "<group>"; };
 		4D71E4372044BA0300C51054 /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
-		4D71E4392044BA7300C51054 /* Headline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
+		4D762C232046EB140021D01C /* RegistrationCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellProtocol.swift; sourceTree = "<group>"; };
+		4D762C252046EB3A0021D01C /* RegistrationCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellType.swift; sourceTree = "<group>"; };
+		4D762C282046EBDC0021D01C /* RegistrationTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTextFieldType.swift; sourceTree = "<group>"; };
+		4D762C2A2046ECD40021D01C /* RegistrationTextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTextFieldModel.swift; sourceTree = "<group>"; };
+		4D762C2C2046F6500021D01C /* RegistrationPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPickerModel.swift; sourceTree = "<group>"; };
+		4D762C2E2046F6AD0021D01C /* RegistrationSwitchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSwitchModel.swift; sourceTree = "<group>"; };
+		4D7650162047056000E5EA2F /* PickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCell.swift; sourceTree = "<group>"; };
+		4D765018204709F400E5EA2F /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
 		4DC33B4B203E097B0045E885 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -280,6 +295,7 @@
 		4DC8ABC62045D556003244E5 /* RegistrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegistrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC8ABC82045D556003244E5 /* RegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTests.swift; sourceTree = "<group>"; };
 		4DC8ABCA2045D556003244E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC8ABD5204601AD003244E5 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		4DFD3207203B394400096BA8 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		4DFF3237203B3BCC00C6C561 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
 		4DFF3239203B5DDF00C6C561 /* CustomerListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListState.swift; sourceTree = "<group>"; };
@@ -545,6 +561,7 @@
 		4D71E4332044B98800C51054 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D762C222046EAF70021D01C /* Cells */,
 				4D71E43B2044BB2100C51054 /* Headline */,
 			);
 			path = Model;
@@ -554,6 +571,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFF323C203B711F00C6C561 /* RegisterViewController.swift */,
+				4D762C21204602380021D01C /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -561,11 +579,41 @@
 		4D71E43B2044BB2100C51054 /* Headline */ = {
 			isa = PBXGroup;
 			children = (
-				4D71E4392044BA7300C51054 /* Headline.swift */,
 				4D71E4352044B9CF00C51054 /* RetrieveHeadlines.swift */,
 				4D71E4372044BA0300C51054 /* InMemoryHeadlines.swift */,
 			);
 			path = Headline;
+			sourceTree = "<group>";
+		};
+		4D762C21204602380021D01C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DC8ABD5204601AD003244E5 /* TextFieldCell.swift */,
+				4D7650162047056000E5EA2F /* PickerCell.swift */,
+				4D765018204709F400E5EA2F /* SwitchCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D762C222046EAF70021D01C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4D762C232046EB140021D01C /* RegistrationCellProtocol.swift */,
+				4D762C252046EB3A0021D01C /* RegistrationCellType.swift */,
+				4D762C272046EBD20021D01C /* Cell Model */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D762C272046EBD20021D01C /* Cell Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D762C282046EBDC0021D01C /* RegistrationTextFieldType.swift */,
+				4D762C2A2046ECD40021D01C /* RegistrationTextFieldModel.swift */,
+				4D762C2C2046F6500021D01C /* RegistrationPickerModel.swift */,
+				4D762C2E2046F6AD0021D01C /* RegistrationSwitchModel.swift */,
+			);
+			path = "Cell Model";
 			sourceTree = "<group>";
 		};
 		4DC33B4A203E09470045E885 /* Core Data */ = {
@@ -957,16 +1005,20 @@
 			files = (
 				49423E7920348323009C3599 /* Customer.swift in Sources */,
 				4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */,
+				4D762C292046EBDC0021D01C /* RegistrationTextFieldType.swift in Sources */,
 				4D71E4382044BA0300C51054 /* InMemoryHeadlines.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
 				4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */,
 				4D71E3E62044A8CE00C51054 /* CNPJValidator.swift in Sources */,
 				4D2AC13F2040C10E00F5F330 /* CoreDataFetcher.swift in Sources */,
+				4DC8ABD6204601AD003244E5 /* TextFieldCell.swift in Sources */,
+				4D7650172047056000E5EA2F /* PickerCell.swift in Sources */,
 				4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */,
 				4DFF323D203B711F00C6C561 /* RegisterViewController.swift in Sources */,
 				4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */,
 				4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */,
-				4D71E43A2044BA7300C51054 /* Headline.swift in Sources */,
+				4D765019204709F400E5EA2F /* SwitchCell.swift in Sources */,
+				4D762C242046EB140021D01C /* RegistrationCellProtocol.swift in Sources */,
 				4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */,
 				4D71E4362044B9CF00C51054 /* RetrieveHeadlines.swift in Sources */,
 				4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */,
@@ -974,11 +1026,15 @@
 				4D71E3CB204492A600C51054 /* EmailValidator.swift in Sources */,
 				4D71E3CD204492BE00C51054 /* PhoneValidator.swift in Sources */,
 				4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */,
+				4D762C2F2046F6AD0021D01C /* RegistrationSwitchModel.swift in Sources */,
 				4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */,
+				4D762C262046EB3A0021D01C /* RegistrationCellType.swift in Sources */,
 				4DC8ABC12045CF84003244E5 /* RegistrationViewModel.swift in Sources */,
 				4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */,
 				4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */,
 				4D2AC13D2040C0F400F5F330 /* UserTranslater.swift in Sources */,
+				4D762C2D2046F6500021D01C /* RegistrationPickerModel.swift in Sources */,
+				4D762C2B2046ECD40021D01C /* RegistrationTextFieldModel.swift in Sources */,
 				4D71E3C92044929000C51054 /* NameValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

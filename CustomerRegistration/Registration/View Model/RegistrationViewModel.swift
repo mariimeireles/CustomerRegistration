@@ -10,17 +10,17 @@ import Foundation
 
 class RegistrationViewModel {
     
-    var registrationHeadline: Headline!
-    private let headlineFetcher: RetrieveHeadlines
-
+    var registrationHeadline: [RegistrationCellProtocol]!
+    private let headlinesFetcher: RetrieveHeadlines
+    
     init(fetcher: RetrieveHeadlines) {
-        self.headlineFetcher = fetcher
+        self.headlinesFetcher = fetcher
         self.registrationHeadline = populateHeadline()
     }
-
-    func populateHeadline() -> Headline {
-        let headlineFetched = self.headlineFetcher.fetchHeadlines()
-        return headlineFetched
+    
+    func populateHeadline() -> [RegistrationCellProtocol] {
+        return self.headlinesFetcher.fetchHeadlines()
     }
-
 }
+
+

@@ -11,13 +11,19 @@ import Foundation
 class InMemoryContacts: RetrieveContacts {
     
     func fetchCustomers() -> [Customer] {
-        var customers = [Customer]()
-        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false))
-        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false))
-        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false))
-        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false))
-        
-        return customers
+        return [
+          Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false),
+          Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false),
+          Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false),
+          Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false)
+        ]
+//        var customers = [Customer]()
+//        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false))
+//        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Facebook Co.", cnpj: "85814550000105", activeSince: Date(), isMei: false))
+//        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false))
+//        customers.append(Customer(ownerName: "Mark Zuckerberg", email: "mark@zuckerberg.com", telephone: "123456789", companyName: "Instagram", cnpj: "85814550000105", activeSince: Date(), isMei: false))
+//
+//        return customers
     }
     
 }

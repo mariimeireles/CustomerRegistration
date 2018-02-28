@@ -12,6 +12,7 @@
 		49CF815020347FB20017E1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CF814E20347FB20017E1FA /* Main.storyboard */; };
 		49CF815220347FB20017E1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CF815120347FB20017E1FA /* Assets.xcassets */; };
 		49CF815520347FB20017E1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CF815320347FB20017E1FA /* LaunchScreen.storyboard */; };
+		4D28EDFA20473401005E8BE8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28EDF920473401005E8BE8 /* CustomTextField.swift */; };
 		4D2AC13D2040C0F400F5F330 /* UserTranslater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2AC13C2040C0F400F5F330 /* UserTranslater.swift */; };
 		4D2AC13F2040C10E00F5F330 /* CoreDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2AC13E2040C10E00F5F330 /* CoreDataFetcher.swift */; };
 		4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CCC56203DC1ED00802D31 /* RetrieveContacts.swift */; };
@@ -245,6 +246,7 @@
 		49CF815620347FB20017E1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49EDB1FD2036231C00F44319 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		49EDB1FE2036231C00F44319 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		4D28EDF920473401005E8BE8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4D2AC13C2040C0F400F5F330 /* UserTranslater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTranslater.swift; sourceTree = "<group>"; };
 		4D2AC13E2040C10E00F5F330 /* CoreDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetcher.swift; sourceTree = "<group>"; };
 		4D2CCC56203DC1ED00802D31 /* RetrieveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveContacts.swift; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFF323C203B711F00C6C561 /* RegisterViewController.swift */,
+				4D28EDF920473401005E8BE8 /* CustomTextField.swift */,
 				4D762C21204602380021D01C /* Cells */,
 			);
 			path = View;
@@ -1011,6 +1014,7 @@
 				4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */,
 				4D71E3E62044A8CE00C51054 /* CNPJValidator.swift in Sources */,
 				4D2AC13F2040C10E00F5F330 /* CoreDataFetcher.swift in Sources */,
+				4D28EDFA20473401005E8BE8 /* CustomTextField.swift in Sources */,
 				4DC8ABD6204601AD003244E5 /* TextFieldCell.swift in Sources */,
 				4D7650172047056000E5EA2F /* PickerCell.swift in Sources */,
 				4DFD3208203B394400096BA8 /* InMemoryContacts.swift in Sources */,

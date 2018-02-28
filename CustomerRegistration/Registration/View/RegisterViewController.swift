@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
         self.inMemoryHeadlines = InMemoryHeadlines()
         self.registrationViewModel = RegistrationViewModel(fetcher: self.inMemoryHeadlines)
         DispatchQueue.main.async {
+            self.tableView.allowsSelection = false
             self.tableView.reloadData()
         }
     }
@@ -55,6 +56,7 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
 
 }

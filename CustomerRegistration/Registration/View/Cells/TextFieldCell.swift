@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldCell: UITableViewCell {
+class TextFieldCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     
@@ -19,10 +19,21 @@ class TextFieldCell: UITableViewCell {
     }
     
     private func updateUI() {
+        textField.delegate = self
         guard let model = model as? RegistrationTextFieldModel else { return }
+        setProperties(for: model)
+    }
+    
+    private func setProperties(for model: RegistrationTextFieldModel) {
         DispatchQueue.main.async {
             self.textField.placeholder = model.placeholder
+            self.textField.keyboardType = model.keyboardType
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     override func awakeFromNib() {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum RegistrationTextFieldType {
     
@@ -28,6 +29,21 @@ enum RegistrationTextFieldType {
             return placeholder
         case let .cnpj(placeholder):
             return placeholder
+        }
+    }
+    
+    var keyboardType: UIKeyboardType {
+        switch self {
+        case .ownerName:
+            return .default
+        case .email:
+            return .emailAddress
+        case .phone:
+            return .numberPad
+        case .companyName:
+            return .default
+        case .cnpj:
+            return .numberPad
         }
     }
 }

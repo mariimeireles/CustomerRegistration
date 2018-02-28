@@ -7,15 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class RegistrationTextFieldModel: RegistrationCellProtocol {
     
     let fieldType: RegistrationTextFieldType
     let placeholder: String
+    let keyboardType: UIKeyboardType
     
     init(type: RegistrationTextFieldType) {
         self.fieldType = type
         self.placeholder = type.placeholder
+        self.keyboardType = type.keyboardType
     }
     
     var type: RegistrationCellType {

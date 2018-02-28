@@ -24,7 +24,19 @@ class PickerCell: UITableViewCell {
         DispatchQueue.main.async {
             self.label.text = model.label
             self.textField.placeholder = model.placeholder
+            
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = UIDatePickerMode.date
+            datePicker.addTarget(self, action: #selector(PickerCell.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
+            self.textField.inputView = datePicker
         }
+    }
+    
+    @objc private func datePickerValueChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        self.textField.text = formatter.string(from: sender.date)
     }
     
     override func awakeFromNib() {

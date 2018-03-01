@@ -19,6 +19,8 @@
 		4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CCC58203DD7CB00802D31 /* DataBaseContacts.swift */; };
 		4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */; };
 		4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */; };
+		4D607A0E204875A500D86EF3 /* RegistrationValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D607A0D204875A500D86EF3 /* RegistrationValidators.swift */; };
+		4D607A122048800700D86EF3 /* RegistrationCellFieldCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D607A112048800700D86EF3 /* RegistrationCellFieldCapture.swift */; };
 		4D6EF1CE203C97DF0073C1C2 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */; };
 		4D6EF1D5203C99AC0073C1C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
 		4D6EF1D6203C99AF0073C1C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
@@ -253,6 +255,8 @@
 		4D2CCC58203DD7CB00802D31 /* DataBaseContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseContacts.swift; sourceTree = "<group>"; };
 		4D2CCCB8203DDE0B00802D31 /* myMainProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myMainProject.xcdatamodel; sourceTree = "<group>"; };
 		4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
+		4D607A0D204875A500D86EF3 /* RegistrationValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidators.swift; sourceTree = "<group>"; };
+		4D607A112048800700D86EF3 /* RegistrationCellFieldCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellFieldCapture.swift; sourceTree = "<group>"; };
 		4D6EF1CB203C97DF0073C1C2 /* CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		4D6EF1CF203C97DF0073C1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -511,6 +515,7 @@
 				4D71E3CC204492BE00C51054 /* PhoneValidator.swift */,
 				4D71E3D02044A44500C51054 /* CompanyNameValidator.swift */,
 				4D71E3E52044A8CE00C51054 /* CNPJValidator.swift */,
+				4D607A0D204875A500D86EF3 /* RegistrationValidators.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 			children = (
 				4D762C232046EB140021D01C /* RegistrationCellProtocol.swift */,
 				4D762C252046EB3A0021D01C /* RegistrationCellType.swift */,
+				4D607A112048800700D86EF3 /* RegistrationCellFieldCapture.swift */,
 				4D762C272046EBD20021D01C /* Cell Model */,
 			);
 			path = Cells;
@@ -1006,6 +1012,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D607A122048800700D86EF3 /* RegistrationCellFieldCapture.swift in Sources */,
 				49423E7920348323009C3599 /* Customer.swift in Sources */,
 				4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */,
 				4D762C292046EBDC0021D01C /* RegistrationTextFieldType.swift in Sources */,
@@ -1022,6 +1029,7 @@
 				4DFF3238203B3BCC00C6C561 /* CustomerListViewModel.swift in Sources */,
 				4D2CCC59203DD7CB00802D31 /* DataBaseContacts.swift in Sources */,
 				4D765019204709F400E5EA2F /* SwitchCell.swift in Sources */,
+				4D607A0E204875A500D86EF3 /* RegistrationValidators.swift in Sources */,
 				4D762C242046EB140021D01C /* RegistrationCellProtocol.swift in Sources */,
 				4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */,
 				4D71E4362044B9CF00C51054 /* RetrieveHeadlines.swift in Sources */,

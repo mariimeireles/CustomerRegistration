@@ -13,11 +13,17 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView!
     private var registrationViewModel: RegistrationViewModel!
     private var inMemoryHeadlines: InMemoryHeadlines!
+    private let nameValidator = NameValidator()
+    private let emailValidator = EmailValidator()
+    private let phoneValidator = PhoneValidator()
+    private let companyNameValidator = CompanyNameValidator()
+    private let cnpjValidator = CNPJValidator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.inMemoryHeadlines = InMemoryHeadlines()
-        self.registrationViewModel = RegistrationViewModel(fetcher: self.inMemoryHeadlines)
+        let validators = RegistrationValidators(name: self.nameValidator, email: self.emailValidator, phone: self.phoneValidator, companyName: self.companyNameValidator, cnpj: self.cnpjValidator)
+        self.registrationViewModel = RegistrationViewModel(fetcher: self.inMemoryHeadlines, validators: validators)
         DispatchQueue.main.async {
             self.tableView.allowsSelection = false
             self.tableView.reloadData()
@@ -36,6 +42,7 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
         case .textfield:
             guard let textFieldCell = tableView.dequeueReusableCell(withIdentifier: "TextFieldCell", for: indexPath) as? TextFieldCell else { return UITableViewCell() }
             textFieldCell.model = headlineRow
+            textFieldCell.fieldCapture = registrationViewModel
             cell = textFieldCell
         case .picker:
             guard let pickerCell = tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as? PickerCell else { return UITableViewCell() }

@@ -11,6 +11,8 @@ import UIKit
 class TextFieldCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var alertLabel: UILabel!
+    var textfieldModel: RegistrationTextFieldModel!
     
     var model: RegistrationCellProtocol? {
         didSet {
@@ -22,12 +24,14 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
         textField.delegate = self
         guard let model = model as? RegistrationTextFieldModel else { return }
         setProperties(for: model)
+        textfieldModel = model
     }
     
     private func setProperties(for model: RegistrationTextFieldModel) {
         DispatchQueue.main.async {
             self.textField.placeholder = model.placeholder
             self.textField.keyboardType = model.keyboardType
+            self.textField.addTarget(self, action: #selector(self.editingChanged), for: .editingChanged)
         }
     }
     
@@ -43,5 +47,17 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        
+        if textField.text?.count == 1 {
+            if textField.text?.first == " " {
+                textField.text = ""
+                return
+            }
+        }
+        
+    }
+
     
 }

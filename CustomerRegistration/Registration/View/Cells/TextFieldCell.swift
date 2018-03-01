@@ -60,7 +60,6 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
         setAlertLabel(text)
     }
     
-    
     private func setAlertLabel(_ text: String) {
         guard let model = model as? RegistrationTextFieldModel else { return }
         if let label = fieldCapture?.validate(text, for: model){
@@ -71,6 +70,63 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
                 self.alertLabel.text = ""
             }
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let fieldType = getFieldType(for: model as! RegistrationTextFieldModel)
+        switch fieldType {
+        case .phone:
+            if let stringText = textField.text {
+                if (stringText.count == 0) && string != ""{
+                    textField.text = "\(textField.text!)(\(string)"
+                    return false
+                }
+                if (stringText.count == 3) && string != ""{
+                    textField.text = "\(textField.text!)) \(string)"
+                    return false
+                }
+                if (stringText.count == 4) && string != ""{
+                    textField.text = "\(textField.text!) \(string)"
+                    return false
+                }
+                if (stringText.count == 9) && string != "" {
+                    textField.text = "\(textField.text!)-\(string)"
+                    return false
+                }
+                if range.length + range.location > (textField.text?.count)!{
+                    return false
+                }
+                let newLenght = (textField.text?.count)! + string.count - range.length
+                return newLenght <= 15
+            }
+        case .cnpj:
+            if let stringText = textField.text {
+                if (stringText.count == 2 || stringText.count == 6) && string != ""{
+                    textField.text = "\(textField.text!).\(string)"
+                    return false
+                }
+                if (stringText.count == 10) && string != ""{
+                    textField.text = "\(textField.text!)/\(string)"
+                    return false
+                }
+                if (stringText.count == 15) && string != "" {
+                    textField.text = "\(textField.text!)-\(string)"
+                    return false
+                }
+                if range.length + range.location > (textField.text?.count)!{
+                    return false
+                }
+                let newLenght = (textField.text?.count)! + string.count - range.length
+                return newLenght <= 18
+            }
+        default:
+            return true
+        }
+        return true
+    }
+    
+    private func getFieldType(for model: RegistrationTextFieldModel) -> RegistrationTextFieldType{
+        return model.fieldType
     }
 
     

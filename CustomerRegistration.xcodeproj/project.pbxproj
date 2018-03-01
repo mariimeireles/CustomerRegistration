@@ -67,9 +67,9 @@
 		4D7650172047056000E5EA2F /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7650162047056000E5EA2F /* PickerCell.swift */; };
 		4D765019204709F400E5EA2F /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D765018204709F400E5EA2F /* SwitchCell.swift */; };
 		4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */; };
+		4D93A6A72048B5F800C43269 /* Client+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93A6A52048B5F800C43269 /* Client+CoreDataClass.swift */; };
+		4D93A6A82048B5F800C43269 /* Client+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93A6A62048B5F800C43269 /* Client+CoreDataProperties.swift */; };
 		4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4B203E097B0045E885 /* PersistenceService.swift */; };
-		4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */; };
-		4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */; };
 		4DC8ABB32044BF52003244E5 /* HeadlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8ABB22044BF52003244E5 /* HeadlineTests.swift */; };
 		4DC8ABBA2044BF61003244E5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
 		4DC8ABBB2044BF61003244E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
@@ -291,9 +291,9 @@
 		4D7650162047056000E5EA2F /* PickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCell.swift; sourceTree = "<group>"; };
 		4D765018204709F400E5EA2F /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		4D7D93EE203B1AC80044FFCF /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
+		4D93A6A52048B5F800C43269 /* Client+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4D93A6A62048B5F800C43269 /* Client+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4DC33B4B203E097B0045E885 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
-		4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4DC8ABB02044BF52003244E5 /* HeadlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC8ABB22044BF52003244E5 /* HeadlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTests.swift; sourceTree = "<group>"; };
 		4DC8ABB42044BF52003244E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -628,10 +628,10 @@
 		4DC33B4A203E09470045E885 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				4D93A6A52048B5F800C43269 /* Client+CoreDataClass.swift */,
+				4D93A6A62048B5F800C43269 /* Client+CoreDataProperties.swift */,
 				4D2AC13C2040C0F400F5F330 /* UserTranslater.swift */,
 				4D2AC13E2040C10E00F5F330 /* CoreDataFetcher.swift */,
-				4DC33B4D203E0A4A0045E885 /* User+CoreDataClass.swift */,
-				4DC33B4E203E0A4A0045E885 /* User+CoreDataProperties.swift */,
 				4D2CCCB7203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld */,
 				4DC33B4B203E097B0045E885 /* PersistenceService.swift */,
 			);
@@ -1018,7 +1018,6 @@
 				4D762C292046EBDC0021D01C /* RegistrationTextFieldType.swift in Sources */,
 				4D71E4382044BA0300C51054 /* InMemoryHeadlines.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,
-				4DC33B4F203E0A4A0045E885 /* User+CoreDataClass.swift in Sources */,
 				4D71E3E62044A8CE00C51054 /* CNPJValidator.swift in Sources */,
 				4D2AC13F2040C10E00F5F330 /* CoreDataFetcher.swift in Sources */,
 				4D28EDFA20473401005E8BE8 /* CustomTextField.swift in Sources */,
@@ -1033,16 +1032,17 @@
 				4D762C242046EB140021D01C /* RegistrationCellProtocol.swift in Sources */,
 				4D2CCCB9203DDE0B00802D31 /* CustomerRegistration.xcdatamodeld in Sources */,
 				4D71E4362044B9CF00C51054 /* RetrieveHeadlines.swift in Sources */,
+				4D93A6A82048B5F800C43269 /* Client+CoreDataProperties.swift in Sources */,
 				4D2CCC57203DC1ED00802D31 /* RetrieveContacts.swift in Sources */,
 				4D71E3D12044A44500C51054 /* CompanyNameValidator.swift in Sources */,
 				4D71E3CB204492A600C51054 /* EmailValidator.swift in Sources */,
 				4D71E3CD204492BE00C51054 /* PhoneValidator.swift in Sources */,
-				4DC33B50203E0A4A0045E885 /* User+CoreDataProperties.swift in Sources */,
 				4D762C2F2046F6AD0021D01C /* RegistrationSwitchModel.swift in Sources */,
 				4DFF323A203B5DDF00C6C561 /* CustomerListState.swift in Sources */,
 				4D762C262046EB3A0021D01C /* RegistrationCellType.swift in Sources */,
 				4DC8ABC12045CF84003244E5 /* RegistrationViewModel.swift in Sources */,
 				4D7D93EF203B1AC80044FFCF /* CustomerCell.swift in Sources */,
+				4D93A6A72048B5F800C43269 /* Client+CoreDataClass.swift in Sources */,
 				4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */,
 				4D2AC13D2040C0F400F5F330 /* UserTranslater.swift in Sources */,
 				4D762C2D2046F6500021D01C /* RegistrationPickerModel.swift in Sources */,

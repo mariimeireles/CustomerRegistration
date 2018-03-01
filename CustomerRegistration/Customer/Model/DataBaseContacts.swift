@@ -15,10 +15,10 @@ class DataBaseContacts: RetrieveContacts {
     
     func fetchCustomers() -> [Customer] {
         var customers = [Customer]()
-        let users = coreDataFetcher.fetchUsers()
-        for user in users {
-            let fetchedUser = UserTranslater(managedCustomer: user)
-            customers.append(Customer(translatedCustomer: fetchedUser))
+        let clients = coreDataFetcher.fetchClients()
+        for client in clients {
+            let fetchedClient = ClientTranslater(managedCustomer: client)
+            customers.append(Customer(translatedCustomer: fetchedClient))
         }
         return customers
     }

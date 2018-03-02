@@ -355,6 +355,9 @@
                                             <state key="normal" title="Create">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             </state>
+                                            <connections>
+                                                <action selector="createButton:" destination="zXc-uQ-5hC" eventType="touchUpInside" id="ySH-xd-RA4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

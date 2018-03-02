@@ -12,6 +12,7 @@ class PickerCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    var dateCapture: RegistrationCellDateCapture?
     
     var model: RegistrationCellProtocol? {
         didSet {
@@ -26,6 +27,10 @@ class PickerCell: UITableViewCell {
             self.textField.placeholder = model.placeholder
             self.DatePicker()
         }
+    }
+    @IBAction func editingDidEnd(_ sender: Any) {
+        let text = self.textField.text
+        dateCapture?.validate(text!)
     }
     
     private func DatePicker() {

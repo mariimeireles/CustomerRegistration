@@ -1,5 +1,5 @@
 //
-//  RegistrationValidators.swift
+//  TextFieldValidators.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles | Stone on 3/1/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RegistrationValidators {
+class TextFieldValidators {
     
     let nameValidator: NameValidator
     let emailValidator: EmailValidator

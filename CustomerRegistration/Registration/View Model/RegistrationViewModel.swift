@@ -13,22 +13,69 @@ class RegistrationViewModel {
     
     var registrationHeadline: [RegistrationCellProtocol]!
     private let headlinesFetcher: RetrieveHeadlines
-    private let validators: RegistrationValidators
+    private let textFieldValidators: TextFieldValidators
+    let registrationValidator = RegistrationValidator()
+    private(set) var registrationState: RegistrationState = .invalid {
+        didSet {
+            callUpdateButtonWhenStateChange(oldValue)
+        }
+    }
+    var didUpdateButtonState: ((Bool) -> Void)?
     
-    init(fetcher: RetrieveHeadlines, validators: RegistrationValidators) {
+    init(fetcher: RetrieveHeadlines, validators: TextFieldValidators) {
         self.headlinesFetcher = fetcher
-        self.validators = validators
+        self.textFieldValidators = validators
         self.registrationHeadline = populateHeadline()
-
     }
     
     func populateHeadline() -> [RegistrationCellProtocol] {
         return self.headlinesFetcher.fetchHeadlines()
     }
     
+    private func verifyRegistrationState() {
+        let isAllFieldsValid = registrationValidator.isAllFieldsValid
+        let registrationState = RegistrationState(isValid: isAllFieldsValid)
+        self.registrationState = registrationState
+    }
+    
+    private func callUpdateButtonWhenStateChange(_ oldState: RegistrationState) {
+        if oldState != registrationState {
+            didUpdateButtonState?(registrationState.isValid)
+        }
+    }
+    
 }
 
-extension RegistrationViewModel: RegistrationCellFieldCapture {
+extension RegistrationViewModel {
+    
+    class RegistrationValidator {
+        typealias Property = (field: String, isValid: Bool)
+        
+        var ownerName: Property = (field: "", isValid: false)
+        var email: Property = (field: "", isValid: false)
+        var phone: Property = (field: "", isValid: false)
+        var companyName: Property = (field: "", isValid: false)
+        var cnpj: Property = (field: "", isValid: false)
+        var activeSince: Property = (field: "", isValid: false)
+        var isMei: Bool = false
+        
+        var isAllFieldsValid: Bool {
+            return
+                self.ownerName.isValid &&
+                self.email.isValid &&
+                self.phone.isValid &&
+                self.companyName.isValid &&
+                self.cnpj.isValid &&
+                self.activeSince.isValid
+        }
+        
+        var customer: Customer {
+            return Customer(ownerName: self.ownerName.field, email: self.email.field, telephone: self.phone.field, companyName: self.companyName.field, cnpj: self.cnpj.field, activeSince: self.activeSince.field, isMei: self.isMei)
+        }
+    }
+}
+
+extension RegistrationViewModel: RegistrationCellTextFieldCapture {
     
     func validate(_ text: String, for type: RegistrationTextFieldModel) -> UILabel {
         
@@ -36,33 +83,32 @@ extension RegistrationViewModel: RegistrationCellFieldCapture {
         
         switch type.fieldType {
         case .ownerName:
-            let result = validators.nameValidator.validate(inputName: text)
+            let result = textFieldValidators.nameValidator.validate(inputName: text)
             quote = alertMessage(field: "name", result: result)
-        //            registrationValidator.name = (field: text, isValid: result)
+            registrationValidator.ownerName = (field: text, isValid: result)
         case .email:
-            let result = validators.emailValidator.validate(inputEmail: text)
+            let result = textFieldValidators.emailValidator.validate(inputEmail: text)
             quote = alertMessage(field: "email", result: result)
-        //            registrationValidator.email = (field: text, isValid: result)
+            registrationValidator.email = (field: text, isValid: result)
         case .phone:
-            let result = validators.phoneValidator.validate(inputNumber: text)
+            let result = textFieldValidators.phoneValidator.validate(inputNumber: text)
             quote = alertMessage(field: "phone ", result: result)
-        //            registrationValidator.phone = (field: text, isValid: result)
+            registrationValidator.phone = (field: text, isValid: result)
         case .companyName:
-            let result = validators.companyNameValidator.validate(inputCompany: text)
+            let result = textFieldValidators.companyNameValidator.validate(inputCompany: text)
             quote = alertMessage(field: "name", result: result)
-        //            registrationValidator.companyName = (field: text, isValid: result)
+            registrationValidator.companyName = (field: text, isValid: result)
         case .cnpj:
-            let result = validators.cnpjValidator.validate(inputCNPJ: text)
+            let result = textFieldValidators.cnpjValidator.validate(inputCNPJ: text)
             quote = alertMessage(field: "cnpj", result: result)
-            //            registrationValidator.cnpj = (field: text, isValid: result)
+            registrationValidator.cnpj = (field: text, isValid: result)
         }
         
-        //        verifyRegistrationStatus()
-        
+        verifyRegistrationState()
         return quote
     }
     
-    func alertMessage(field: String, result: Bool) -> UILabel{
+    private func alertMessage(field: String, result: Bool) -> UILabel{
         
         let alertLabel = UILabel()
         
@@ -77,4 +123,27 @@ extension RegistrationViewModel: RegistrationCellFieldCapture {
     }
 }
 
+extension RegistrationViewModel: RegistrationCellDateCapture {
+    
+    func validate(_ text: String) -> Bool {
+        
+        var result = false
+        
+        if !text.isEmpty {
+            result = true
+        }
+        registrationValidator.activeSince = (field: text, isValid: result)
+        verifyRegistrationState()
+        return result
+    }
+    
+}
 
+extension RegistrationViewModel: RegistrationCellSwitchCapture {
+    
+    func isMeiChanged(to status: Bool) {
+        registrationValidator.isMei = status
+        verifyRegistrationState()
+    }
+    
+}

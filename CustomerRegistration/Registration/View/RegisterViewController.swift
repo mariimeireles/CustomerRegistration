@@ -11,6 +11,7 @@ import UIKit
 class RegisterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var createButton: CustomButton!
     private var registrationViewModel: RegistrationViewModel!
     private var inMemoryHeadlines: InMemoryHeadlines!
     private let nameValidator = NameValidator()
@@ -21,12 +22,29 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.inMemoryHeadlines = InMemoryHeadlines()
-        let validators = RegistrationValidators(name: self.nameValidator, email: self.emailValidator, phone: self.phoneValidator, companyName: self.companyNameValidator, cnpj: self.cnpjValidator)
-        self.registrationViewModel = RegistrationViewModel(fetcher: self.inMemoryHeadlines, validators: validators)
+        setValidators()
+        setCallbackForUpdateButtonState()
         DispatchQueue.main.async {
             self.tableView.allowsSelection = false
             self.tableView.reloadData()
+        }
+    }
+    
+    private func setValidators() {
+        self.inMemoryHeadlines = InMemoryHeadlines()
+        let validators = TextFieldValidators(name: self.nameValidator, email: self.emailValidator, phone: self.phoneValidator, companyName: self.companyNameValidator, cnpj: self.cnpjValidator)
+        self.registrationViewModel = RegistrationViewModel(fetcher: self.inMemoryHeadlines, validators: validators)
+    }
+    
+    private func setCallbackForUpdateButtonState() {
+        registrationViewModel.didUpdateButtonState = { [weak self] isEnabled in
+            self?.setButton(to: isEnabled)
+        }
+    }
+    
+    private func setButton(to isEnabled: Bool) {
+        DispatchQueue.main.async {
+            self.createButton.isEnabled = isEnabled
         }
     }
     
@@ -42,15 +60,17 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
         case .textfield:
             guard let textFieldCell = tableView.dequeueReusableCell(withIdentifier: "TextFieldCell", for: indexPath) as? TextFieldCell else { return UITableViewCell() }
             textFieldCell.model = headlineRow
-            textFieldCell.fieldCapture = registrationViewModel
+            textFieldCell.textFieldCapture = registrationViewModel
             cell = textFieldCell
         case .picker:
             guard let pickerCell = tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as? PickerCell else { return UITableViewCell() }
             pickerCell.model = headlineRow
+            pickerCell.dateCapture = registrationViewModel
             cell = pickerCell
         case .switch:
             guard let switchCell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath) as? SwitchCell else { return UITableViewCell() }
             switchCell.model = headlineRow
+            switchCell.switchCapture = registrationViewModel
             cell = switchCell
         }
 

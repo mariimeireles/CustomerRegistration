@@ -12,7 +12,7 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var alertLabel: UILabel!
-    var fieldCapture: RegistrationCellFieldCapture?
+    var textFieldCapture: RegistrationCellTextFieldCapture?
     
     var model: RegistrationCellProtocol? {
         didSet {
@@ -62,7 +62,7 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
     
     private func setAlertLabel(_ text: String) {
         guard let model = model as? RegistrationTextFieldModel else { return }
-        if let label = fieldCapture?.validate(text, for: model){
+        if let label = textFieldCapture?.validate(text, for: model) {
             if !text.isEmpty {
                 self.alertLabel.text = label.text
                 self.alertLabel.textColor = label.textColor

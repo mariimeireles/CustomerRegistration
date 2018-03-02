@@ -1,5 +1,5 @@
 //
-//  RegistrationCellFieldCapture.swift
+//  RegistrationCellTextFieldCapture.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles | Stone on 3/1/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol RegistrationCellFieldCapture: class {
+protocol RegistrationCellTextFieldCapture: class {
     
     func validate(_ text: String, for type: RegistrationTextFieldModel) -> UILabel
 }

@@ -418,6 +418,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="editingDidEnd:" destination="WIi-0R-DqE" eventType="editingDidEnd" id="RTA-F0-shV"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -450,6 +453,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1eb-4r-2Ri">
                                                     <rect key="frame" x="306" y="15" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="valueChanged:" destination="EQv-jx-M4E" eventType="valueChanged" id="AG7-qM-11M"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -463,6 +469,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="mWT-L9-eey" id="fnW-uu-WDd"/>
+                                            <outlet property="switch" destination="1eb-4r-2Ri" id="JN5-ka-YZY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -482,6 +489,7 @@
                         <viewLayoutGuide key="safeArea" id="g5R-w2-nV8"/>
                     </view>
                     <connections>
+                        <outlet property="createButton" destination="PDN-Tl-U4T" id="O13-x5-Rmr"/>
                         <outlet property="tableView" destination="dcA-4n-i2V" id="9bN-cT-BGc"/>
                     </connections>
                 </viewController>

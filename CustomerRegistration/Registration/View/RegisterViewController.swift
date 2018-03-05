@@ -19,7 +19,7 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     private let phoneValidator = PhoneValidator()
     private let companyNameValidator = CompanyNameValidator()
     private let cnpjValidator = CNPJValidator()
-    private let dataModel = DataModel()
+//    private let dataModel = DataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +50,9 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @IBAction func createButton(_ sender: Any) {
-        dataModel.persistRegistration = registrationViewModel
+        registrationViewModel.persistRegistration = registrationViewModel
         let customer = registrationViewModel.registrationValidator.customer
-        dataModel.requestData(customer: customer)
+        registrationViewModel.saveCustomer(customer: customer)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

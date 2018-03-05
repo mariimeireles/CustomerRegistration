@@ -21,7 +21,7 @@ class RegistrationViewModel {
         }
     }
     var didUpdateButtonState: ((Bool) -> Void)?
-//    var persistRegistration: PersistRegistration?
+    var persistRegistration: PersistRegistration?
 
     
     init(fetcher: RetrieveHeadlines, validators: TextFieldValidators) {
@@ -44,6 +44,10 @@ class RegistrationViewModel {
         if oldState != registrationState {
             didUpdateButtonState?(registrationState.isValid)
         }
+    }
+    
+    func saveCustomer(customer: Customer) {
+        persistRegistration?.saveRegistration(customer: customer)
     }
     
 }
@@ -162,14 +166,6 @@ extension RegistrationViewModel: PersistRegistration {
         client.activeSince = customer.activeSince!
         client.isMei = customer.isMei!
         PersistenceService.saveContext()
-    }
-}
-
-class DataModel {
-    weak var persistRegistration: PersistRegistration?
-    var registrationViewModel: RegistrationViewModel!
-    func requestData(customer: Customer) {
-        persistRegistration?.saveRegistration(customer: customer)
     }
 }
 

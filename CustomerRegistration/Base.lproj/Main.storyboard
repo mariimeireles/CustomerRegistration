@@ -357,6 +357,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="createButton:" destination="zXc-uQ-5hC" eventType="touchUpInside" id="ySH-xd-RA4"/>
+                                                <segue destination="MQo-4B-VW7" kind="unwind" unwindAction="unwindFromRegistrationWithSegue:" id="JNo-yE-awa"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -497,6 +498,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcw-DX-GLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MQo-4B-VW7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="900" y="-36.431784107946029"/>
         </scene>

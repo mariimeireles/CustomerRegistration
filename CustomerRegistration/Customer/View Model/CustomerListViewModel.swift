@@ -11,7 +11,7 @@ import Foundation
 class CustomerListViewModel {
     
     var customerRows: [CustomerRow] = [CustomerRow]()
-    private let customersFetcher: RetrieveContacts
+    private var customersFetcher: RetrieveContacts!
     var customerListState: CustomerListState!
     
     init(fetcher: RetrieveContacts) {

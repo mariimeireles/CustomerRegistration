@@ -10,5 +10,5 @@ import Foundation
 
 protocol PersistRegistration: class {
     
-    func saveRegistration()
+    func saveRegistration(customer: Customer)
 }

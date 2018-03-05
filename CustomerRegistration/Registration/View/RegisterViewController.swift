@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     private let phoneValidator = PhoneValidator()
     private let companyNameValidator = CompanyNameValidator()
     private let cnpjValidator = CNPJValidator()
+    private let dataModel = DataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,18 +48,11 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
             self.createButton.isEnabled = isEnabled
         }
     }
+    
     @IBAction func createButton(_ sender: Any) {
-        self.registrationViewModel.persistRegistration?.saveRegistration()
-//        let customer = registrationViewModel.registrationValidator.customer
-//        let client = Client(context: PersistenceService.context)
-//        client.ownerName = customer.ownerName!
-//        client.email = customer.email!
-//        client.telephone = customer.telephone!
-//        client.companyName = customer.companyName!
-//        client.cnpj = customer.cnpj!
-//        client.activeSince = customer.activeSince!
-//        client.isMei = customer.isMei!
-//        PersistenceService.saveContext()
+        dataModel.persistRegistration = registrationViewModel
+        let customer = registrationViewModel.registrationValidator.customer
+        dataModel.requestData(customer: customer)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

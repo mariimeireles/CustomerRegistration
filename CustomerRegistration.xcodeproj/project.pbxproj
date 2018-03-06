@@ -21,6 +21,7 @@
 		4D3EDEF2203B1853003E9ABC /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */; };
 		4D607A0E204875A500D86EF3 /* TextFieldValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D607A0D204875A500D86EF3 /* TextFieldValidators.swift */; };
 		4D607A122048800700D86EF3 /* RegistrationCellTextFieldCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D607A112048800700D86EF3 /* RegistrationCellTextFieldCapture.swift */; };
+		4D6A5CDD204F346400D7FE5E /* CustomerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */; };
 		4D6EF1CE203C97DF0073C1C2 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */; };
 		4D6EF1D5203C99AC0073C1C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
 		4D6EF1D6203C99AF0073C1C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
@@ -262,6 +263,7 @@
 		4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		4D607A0D204875A500D86EF3 /* TextFieldValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidators.swift; sourceTree = "<group>"; };
 		4D607A112048800700D86EF3 /* RegistrationCellTextFieldCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellTextFieldCapture.swift; sourceTree = "<group>"; };
+		4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailViewController.swift; sourceTree = "<group>"; };
 		4D6EF1CB203C97DF0073C1C2 /* CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		4D6EF1CF203C97DF0073C1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 		49CF814920347FB20017E1FA /* CustomerRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				4D6A5CDB204F344D00D7FE5E /* Customer Detail */,
 				49423E76203482FA009C3599 /* Customer */,
 				4D71E3C52044926100C51054 /* Registration */,
 				49CF814A20347FB20017E1FA /* AppDelegate.swift */,
@@ -495,6 +498,14 @@
 				4D3EDEF1203B1853003E9ABC /* CustomerListViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4D6A5CDB204F344D00D7FE5E /* Customer Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */,
+			);
+			path = "Customer Detail";
 			sourceTree = "<group>";
 		};
 		4D6EF1CC203C97DF0073C1C2 /* CustomerTests */ = {
@@ -1068,6 +1079,7 @@
 				4D762C2B2046ECD40021D01C /* RegistrationTextFieldModel.swift in Sources */,
 				4D93A6B02049CADB00C43269 /* RegistrationState.swift in Sources */,
 				4D71E3C92044929000C51054 /* NameValidator.swift in Sources */,
+				4D6A5CDD204F346400D7FE5E /* CustomerDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

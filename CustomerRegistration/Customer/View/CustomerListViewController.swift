@@ -68,6 +68,16 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
         return 110
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let customerDetailVC = segue.destination as? CustomerDetailViewController else {
+            fatalError("CustomerDetailViewController not found")
+        }
+        let indexPath = (self.tableView.indexPathForSelectedRow)!
+        let customer = self.customersListViewModel.customers[indexPath.row]
+        customerDetailVC.customer = customer
+    }
+    
     @IBAction func unwindFromRegistration(segue: UIStoryboardSegue) { }
     
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CustomerDetailViewController: UIViewController {
     
@@ -19,10 +21,12 @@ class CustomerDetailViewController: UIViewController {
     @IBOutlet weak var meiLabel: UILabel!
     var customer: Customer!
     private var viewModel: CustomerDetailViewModel!
+    private let bag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CustomerDetailViewModel(customer: self.customer)
+        viewModel = CustomerDetailViewModel(customer: self.customer, didPressButton: telephoneButton.rx.tap.asObservable())
+
         setLabels()
     }
     
@@ -39,14 +43,5 @@ class CustomerDetailViewController: UIViewController {
             self.meiLabel.text = "No"
         }
     }
-    
-    @IBAction func phoneButton(_ sender: Any) {
-        let phone = customer.telephone
-        let formattedPhone = phone?.replacingOccurrences(of: "[ ()-]", with: "", options: [.regularExpression])
-        guard let number = URL(string: "tel://" + formattedPhone!) else { return }
-        UIApplication.shared.open(number)
-    }
-    
-    
 
 }

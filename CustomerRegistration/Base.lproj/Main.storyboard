@@ -88,9 +88,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9M-6m-7vo">
                                 <rect key="frame" x="30" y="304" width="285" height="30"/>
                                 <state key="normal" title="Owner Telephone"/>
-                                <connections>
-                                    <action selector="phoneButton:" destination="0V1-Rv-ZZv" eventType="touchUpInside" id="yCT-n8-9r2"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNPJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2o-df-qWJ" userLabel="cnpj">
                                 <rect key="frame" x="30" y="352" width="73" height="20"/>

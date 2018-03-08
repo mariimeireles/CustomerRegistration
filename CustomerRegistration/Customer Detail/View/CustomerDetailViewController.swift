@@ -18,9 +18,11 @@ class CustomerDetailViewController: UIViewController {
     @IBOutlet weak var activeSinceLabel: UILabel!
     @IBOutlet weak var meiLabel: UILabel!
     var customer: Customer!
+    private var viewModel: CustomerDetailViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = CustomerDetailViewModel(customer: self.customer)
         setLabels()
     }
     

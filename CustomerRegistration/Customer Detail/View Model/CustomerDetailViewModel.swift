@@ -10,5 +10,9 @@ import Foundation
 
 class CustomerDetailViewModel {
     
-    var customers: [Customer] = [Customer]()
+    var customer: Customer!
+
+    init(customer: Customer!) {
+        self.customer = customer
+    }
 }

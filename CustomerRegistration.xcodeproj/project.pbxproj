@@ -22,6 +22,7 @@
 		4D607A0E204875A500D86EF3 /* TextFieldValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D607A0D204875A500D86EF3 /* TextFieldValidators.swift */; };
 		4D607A122048800700D86EF3 /* RegistrationCellTextFieldCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D607A112048800700D86EF3 /* RegistrationCellTextFieldCapture.swift */; };
 		4D6A5CDD204F346400D7FE5E /* CustomerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */; };
+		4D6A5CE12051A8A300D7FE5E /* CustomerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A5CE02051A8A300D7FE5E /* CustomerDetailViewModel.swift */; };
 		4D6EF1CE203C97DF0073C1C2 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */; };
 		4D6EF1D5203C99AC0073C1C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FE2036231C00F44319 /* Nimble.framework */; };
 		4D6EF1D6203C99AF0073C1C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EDB1FD2036231C00F44319 /* Quick.framework */; };
@@ -264,6 +265,7 @@
 		4D607A0D204875A500D86EF3 /* TextFieldValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidators.swift; sourceTree = "<group>"; };
 		4D607A112048800700D86EF3 /* RegistrationCellTextFieldCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellTextFieldCapture.swift; sourceTree = "<group>"; };
 		4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailViewController.swift; sourceTree = "<group>"; };
+		4D6A5CE02051A8A300D7FE5E /* CustomerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailViewModel.swift; sourceTree = "<group>"; };
 		4D6EF1CB203C97DF0073C1C2 /* CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6EF1CD203C97DF0073C1C2 /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		4D6EF1CF203C97DF0073C1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -503,9 +505,26 @@
 		4D6A5CDB204F344D00D7FE5E /* Customer Detail */ = {
 			isa = PBXGroup;
 			children = (
-				4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */,
+				4D6A5CDF2051A88D00D7FE5E /* View */,
+				4D6A5CDE2051A88200D7FE5E /* View Model */,
 			);
 			path = "Customer Detail";
+			sourceTree = "<group>";
+		};
+		4D6A5CDE2051A88200D7FE5E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D6A5CE02051A8A300D7FE5E /* CustomerDetailViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4D6A5CDF2051A88D00D7FE5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D6A5CDC204F346400D7FE5E /* CustomerDetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4D6EF1CC203C97DF0073C1C2 /* CustomerTests */ = {
@@ -1041,6 +1060,7 @@
 				4D607A122048800700D86EF3 /* RegistrationCellTextFieldCapture.swift in Sources */,
 				49423E7920348323009C3599 /* Customer.swift in Sources */,
 				4DC33B4C203E097B0045E885 /* PersistenceService.swift in Sources */,
+				4D6A5CE12051A8A300D7FE5E /* CustomerDetailViewModel.swift in Sources */,
 				4D762C292046EBDC0021D01C /* RegistrationTextFieldType.swift in Sources */,
 				4D71E4382044BA0300C51054 /* InMemoryHeadlines.swift in Sources */,
 				49CF814B20347FB20017E1FA /* AppDelegate.swift in Sources */,

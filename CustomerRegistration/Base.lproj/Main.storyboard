@@ -279,7 +279,7 @@
                                             <outlet property="companyNameLabel" destination="rvH-4P-vJG" id="Vs2-bq-4go"/>
                                             <outlet property="initialsLabel" destination="pIy-en-Fjd" id="avr-4C-MGo"/>
                                             <outlet property="ownerNameLabel" destination="avX-qo-0dI" id="uqZ-Kn-Es3"/>
-                                            <segue destination="0V1-Rv-ZZv" kind="show" id="wCC-um-Vj6"/>
+                                            <segue destination="0V1-Rv-ZZv" kind="show" identifier="CustomerDetail" id="wCC-um-Vj6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

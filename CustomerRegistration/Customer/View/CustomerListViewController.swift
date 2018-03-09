@@ -82,4 +82,6 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func unwindFromRegistration(segue: UIStoryboardSegue) { }
     
+    @IBAction func unwindFromDetail(segue: UIStoryboardSegue) { }
+    
 }

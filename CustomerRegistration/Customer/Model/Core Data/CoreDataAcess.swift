@@ -1,5 +1,5 @@
 //
-//  CoreDataFetcher.swift
+//  CoreDataAcess.swift
 //  CustomerRegistration
 //
 //  Created by Mariana Meireles | Stone on 2/23/18.
@@ -8,9 +8,10 @@
 
 import Foundation
 import CoreData
+import RxSwift
 
-class CoreDataFetcher {
-    
+class CoreDataAcess {
+
     func fetchClients() -> [Client] {
         var clients = [Client]()
         let fetchRequest: NSFetchRequest<Client> = Client.fetchRequest()
@@ -23,4 +24,15 @@ class CoreDataFetcher {
         return clients
     }
     
+    func deleteClients(customer: Customer) {
+        let clientToBeDeleted = CustomerTranslater(customer: customer)
+        PersistenceService.context.delete(Client(translatedClient: clientToBeDeleted))
+        do {
+            try PersistenceService.context.save()
+        } catch let error as NSError {
+            print ("Failed to save an client, \(error)")
+        }
+    }
+    
 }
+

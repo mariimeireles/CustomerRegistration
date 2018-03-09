@@ -11,11 +11,11 @@ import CoreData
 
 class DataBaseContacts: RetrieveContacts {
     
-    let coreDataFetcher = CoreDataFetcher()
+    let coreDataAcess = CoreDataAcess()
     
     func fetchCustomers() -> [Customer] {
         var customers = [Customer]()
-        let clients = coreDataFetcher.fetchClients()
+        let clients = coreDataAcess.fetchClients()
         for client in clients {
             let fetchedClient = ClientTranslater(managedCustomer: client)
             customers.append(Customer(translatedCustomer: fetchedClient))

@@ -19,13 +19,14 @@ class CustomerDetailViewController: UIViewController {
     @IBOutlet weak var cnpjLabel: UILabel!
     @IBOutlet weak var activeSinceLabel: UILabel!
     @IBOutlet weak var meiLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     var customer: Customer!
     private var viewModel: CustomerDetailViewModel!
     private let bag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CustomerDetailViewModel(customer: self.customer, didPressTelephoneButton: telephoneButton.rx.tap.asObservable(), didPressEmailButton: emailButton.rx.tap.asObservable())
+        viewModel = CustomerDetailViewModel(customer: self.customer, didPressTelephoneButton: telephoneButton.rx.tap.asObservable(), didPressEmailButton: emailButton.rx.tap.asObservable(), didPressDeleteButton: deleteButton.rx.tap.asObservable())
 
         setText()
     }

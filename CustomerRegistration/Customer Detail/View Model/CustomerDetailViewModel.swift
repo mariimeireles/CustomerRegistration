@@ -12,18 +12,26 @@ import RxSwift
 
 class CustomerDetailViewModel {
     private let bag = DisposeBag()
+    private let coreDataAcess = CoreDataAcess()
     var customer: Customer!
 
-    init(customer: Customer!, didPressTelephoneButton: Observable<Void>, didPressEmailButton: Observable<Void>) {
+    init(customer: Customer!, didPressTelephoneButton: Observable<Void>, didPressEmailButton: Observable<Void>, didPressDeleteButton: Observable<Void>) {
         self.customer = customer
         didPressTelephoneButton
             .subscribe() { event in
                 self.didPressTelephoneButton()
         }
             .disposed(by: bag)
+        
         didPressEmailButton
             .subscribe() { event in
                 self.didPressEmailButton()
+        }
+            .disposed(by: bag)
+        
+        didPressDeleteButton
+            .subscribe() { event in
+                self.didPressDeleteButton()
         }
             .disposed(by: bag)
     }
@@ -40,4 +48,9 @@ class CustomerDetailViewModel {
         guard let url = URL(string: "mailto://" + email!) else { return }
         UIApplication.shared.open(url)
     }
+    
+    private func didPressDeleteButton(){
+        coreDataAcess.deleteClients(customer: customer)
+    }
+    
 }

@@ -26,7 +26,7 @@ class CustomerDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CustomerDetailViewModel(customer: self.customer, didPressTelephoneButton: telephoneButton.rx.tap.asObservable(), didPressEmailButton: emailButton.rx.tap.asObservable(), didPressDeleteButton: deleteButton.rx.tap.asObservable())
+        viewModel = CustomerDetailViewModel(customer: self.customer, didPressTelephoneButton: telephoneButton.rx.tap.asObservable(), didPressEmailButton: emailButton.rx.tap.asObservable(), didPressDeleteButton: deleteButton.rx.tap.asObservable(), viewController: self)
 
         setText()
     }

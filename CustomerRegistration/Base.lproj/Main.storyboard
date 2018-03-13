@@ -13,7 +13,7 @@
         <!--Customer Details-->
         <scene sceneID="AwU-by-2DG">
             <objects>
-                <viewController title="Customer Details" id="0V1-Rv-ZZv" customClass="CustomerDetailViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomerDetail" title="Customer Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0V1-Rv-ZZv" customClass="CustomerDetailViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JKN-to-SAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +214,7 @@
         <!--Customers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CustomerListViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomerList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CustomerListViewController" customModule="CustomerRegistration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -32,6 +32,7 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
         switch customerListState {
         case .empty:
             self.tableView.alpha = 0
+            self.warningLabel.alpha = 1
         case .populated:
             self.warningLabel.alpha = 0
             self.tableView.alpha = 1

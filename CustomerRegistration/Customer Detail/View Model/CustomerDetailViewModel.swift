@@ -13,10 +13,12 @@ import RxSwift
 class CustomerDetailViewModel {
     private let bag = DisposeBag()
     private let coreDataAcess = CoreDataAcess()
+    private var viewController: UIViewController
     var customer: Customer!
 
-    init(customer: Customer!, didPressTelephoneButton: Observable<Void>, didPressEmailButton: Observable<Void>, didPressDeleteButton: Observable<Void>) {
+    init(customer: Customer!, didPressTelephoneButton: Observable<Void>, didPressEmailButton: Observable<Void>, didPressDeleteButton: Observable<Void>, viewController: UIViewController) {
         self.customer = customer
+        self.viewController = viewController
         didPressTelephoneButton
             .subscribe() { event in
                 self.didPressTelephoneButton()
@@ -51,6 +53,7 @@ class CustomerDetailViewModel {
     
     private func didPressDeleteButton(){
         coreDataAcess.deleteClients(customer: customer)
+        self.viewController.navigationController?.popToRootViewController(animated: true)
     }
     
 }

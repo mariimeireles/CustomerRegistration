@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-import RxSwift
 
 class CoreDataAcess {
 
@@ -24,26 +23,27 @@ class CoreDataAcess {
         return clients
     }
     
-    func deleteClients(customer: Customer) {
-//        let clientToBeDeleted = CustomerTranslater(customer: customer)
-        let client = Client(context: PersistenceService.context)
-        client.ownerName = customer.ownerName
-        client.cnpj = customer.cnpj
-        client.activeSince = customer.activeSince
-        client.companyName = customer.companyName
-        client.telephone = customer.telephone
-        client.email = customer.email
-        client.isMei = customer.isMei!
-        print("CLIENT\(client)")
-        print("CLIENT EMAIL \(client.email)")
-        PersistenceService.context.delete(client)
+    func fetchSpecificClient(email: String) -> Client {
+        var client: Client!
+        let fetchRequest: NSFetchRequest<Client> = Client.fetchRequest()
         do {
-            try PersistenceService.context.save()
-            print("SAAAAAVE")
+            let fetchedClients = try PersistenceService.context.fetch(fetchRequest)
+            for fetchedClient in fetchedClients {
+                if fetchedClient.email == email {
+                    client = fetchedClient
+                }
+            }
         } catch let error as NSError {
-            print ("Failed to save an client, \(error)")
+            print ("Failed to fetch client, \(error)")
         }
+        return client
     }
     
+    func deleteClients(customer: Customer) {
+        let customerEmail = customer.email
+        let clientToBeDeleted = self.fetchSpecificClient(email: customerEmail!)
+        PersistenceService.context.delete(clientToBeDeleted)
+        PersistenceService.saveContext()
+    }
 }
 

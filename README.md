@@ -2,7 +2,7 @@
 
 :pencil2: Project for studies purpose
 
-MVVM iOS Swift project with a single view register form with fields validation and Unit tests
+MVVM iOS Swift project of customer registration where is possible to view all local registered customers, add new ones and delete them. It has fields validation and Unit tests.
 
 ### Run Tests
 

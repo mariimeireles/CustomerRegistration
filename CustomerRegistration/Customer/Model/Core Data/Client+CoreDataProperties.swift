@@ -25,15 +25,16 @@ extension Client {
     @NSManaged public var activeSince: String?
     @NSManaged public var isMei: Bool
     
-    convenience init (translatedClient: CustomerTranslater) {
-        self.init()
-        self.ownerName = translatedClient.ownerName
-        self.email = translatedClient.email
-        self.telephone = translatedClient.telephone
-        self.companyName = translatedClient.companyName
-        self.cnpj = translatedClient.cnpj
-        self.activeSince = translatedClient.activeSince
-        self.isMei = translatedClient.isMei
-    }
+//    convenience init (translatedClient: CustomerTranslater) {
+//        self.init()
+//        self.ownerName = self.value(forKeyPath: translatedClient.ownerName) as? String
+//        //client.value(forKey: "ownerName") as? String
+////        self.email = translatedClient.client.value(forKey: "email") as? String
+////        self.telephone = translatedClient.client.value(forKey: "telephone") as? String
+////        self.companyName = translatedClient.client.value(forKey: "companyName") as? String
+////        self.cnpj = translatedClient.client.value(forKey: "cnpj") as? String
+////        self.activeSince = translatedClient.client.value(forKey: "activeSince") as? String
+////        self.isMei = translatedClient.client.value(forKey: "activeSince") as! Bool
+//    }
 
 }

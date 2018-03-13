@@ -25,10 +25,21 @@ class CoreDataAcess {
     }
     
     func deleteClients(customer: Customer) {
-        let clientToBeDeleted = CustomerTranslater(customer: customer)
-        PersistenceService.context.delete(Client(translatedClient: clientToBeDeleted))
+//        let clientToBeDeleted = CustomerTranslater(customer: customer)
+        let client = Client(context: PersistenceService.context)
+        client.ownerName = customer.ownerName
+        client.cnpj = customer.cnpj
+        client.activeSince = customer.activeSince
+        client.companyName = customer.companyName
+        client.telephone = customer.telephone
+        client.email = customer.email
+        client.isMei = customer.isMei!
+        print("CLIENT\(client)")
+        print("CLIENT EMAIL \(client.email)")
+        PersistenceService.context.delete(client)
         do {
             try PersistenceService.context.save()
+            print("SAAAAAVE")
         } catch let error as NSError {
             print ("Failed to save an client, \(error)")
         }

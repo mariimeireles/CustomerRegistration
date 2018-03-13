@@ -38,30 +38,32 @@ extension ClientTranslater {
     }
 }
 
-struct CustomerTranslater: Equatable {
-    
-    var ownerName: String?
-    var email: String?
-    var telephone: String?
-    var companyName: String?
-    var cnpj: String?
-    var activeSince: String?
-    var isMei: Bool
-}
+//struct CustomerTranslater: Equatable {
+//
+////    var ownerName: Any
+////    var email: NSManagedObject
+////    var telephone: String
+////    var companyName: String
+////    var cnpj: String
+////    var activeSince: String
+////    var isMei: Bool
+//    var client: Client
+//}
+//
+//func ==(lhs: CustomerTranslater, rhs: CustomerTranslater) -> Bool {
+//////    return lhs.ownerName == rhs.ownerName && lhs.email == rhs.email && lhs.telephone == rhs.telephone && lhs.companyName == rhs.companyName && lhs.cnpj == rhs.cnpj && lhs.activeSince == rhs.activeSince && lhs.isMei == rhs.isMei
+//    return lhs.client == rhs.client
+//}
+//
+//extension CustomerTranslater {
+//    init(customer: Customer) {
+//        self.client = Customer(translatedCustomer: customer)
+////        self.client.setValue(customer.ownerName, forKeyPath: "ownerName")
+////        self.client.setValue(customer.email, forKeyPath: "email")
+////        self.client.setValue(customer.telephone, forKeyPath: "telephone")
+////        self.client.setValue(customer.cnpj, forKeyPath: "cnpj")
+////        self.client.setValue(customer.activeSince, forKeyPath: "activeSince")
+////        self.client.setValue(customer.isMei, forKeyPath: "isMei")
+//    }
+//}
 
-func ==(lhs: CustomerTranslater, rhs: CustomerTranslater) -> Bool {
-    return lhs.ownerName == rhs.ownerName && lhs.email == rhs.email && lhs.telephone == rhs.telephone && lhs.companyName == rhs.companyName && lhs.cnpj == rhs.cnpj && lhs.activeSince == rhs.activeSince && lhs.isMei == rhs.isMei
-}
-
-extension CustomerTranslater {
-    init(client: Client, customer: Customer) {
-        client.ownerName = customer.ownerName
-//        self.ownerName = customer.ownerName!
-//        self.email = customer.email!
-//        self.telephone = customer.telephone!
-//        self.companyName = customer.companyName!
-//        self.cnpj = customer.cnpj!
-//        self.activeSince = customer.activeSince!
-//        self.isMei = customer.isMei!
-    }
-}

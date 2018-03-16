@@ -15,10 +15,10 @@ class Customer {
     var telephone: String?
     var companyName: String?
     var cnpj: String?
-    var activeSince: Date?
+    var activeSince: String?
     var isMei: Bool?
     
-    convenience init(ownerName: String, email: String, telephone: String, companyName: String, cnpj: String, activeSince: Date, isMei: Bool) {
+    convenience init(ownerName: String, email: String, telephone: String, companyName: String, cnpj: String, activeSince: String, isMei: Bool) {
         self.init()
         self.ownerName = ownerName
         self.email = email
@@ -29,7 +29,7 @@ class Customer {
         self.isMei = isMei
     }
     
-    convenience init (translatedCustomer: UserTranslater) {
+    convenience init (translatedCustomer: ClientTranslater) {
         self.init()
         self.ownerName = translatedCustomer.ownerName
         self.email = translatedCustomer.email

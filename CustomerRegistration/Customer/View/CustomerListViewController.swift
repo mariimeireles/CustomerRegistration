@@ -17,10 +17,8 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
     private var inMemoryContacts: InMemoryContacts!
     private var dataBaseContacts: DataBaseContacts!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.inMemoryContacts = InMemoryContacts()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.dataBaseContacts = DataBaseContacts()
         self.customersListViewModel = CustomerListViewModel(fetcher: self.dataBaseContacts)
         customerState()
@@ -36,6 +34,7 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
             self.tableView.alpha = 0
         case .populated:
             self.warningLabel.alpha = 0
+            self.tableView.alpha = 1
         }
     }
     
@@ -62,7 +61,6 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
         }else{
             cell.initialsLabel.text = "-"
         }
-        
         return cell
     }
     
@@ -70,5 +68,6 @@ class CustomerListViewController: UIViewController, UITableViewDataSource, UITab
         return 110
     }
     
+    @IBAction func unwindFromRegistration(segue: UIStoryboardSegue) { }
     
 }

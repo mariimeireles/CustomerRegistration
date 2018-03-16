@@ -10,5 +10,6 @@ import Foundation
 
 protocol RetrieveHeadlines {
     
-    func fetchHeadlines() -> Headline
+    func fetchHeadlines() -> [RegistrationCellProtocol]
+
 }

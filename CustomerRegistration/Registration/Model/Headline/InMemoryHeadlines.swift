@@ -10,10 +10,17 @@ import Foundation
 
 class InMemoryHeadlines: RetrieveHeadlines {
     
-    func fetchHeadlines() -> Headline {
-        let headLine = Headline(ownerName: "Owner Name", email: "Email", telephone: "Phone for contact", companyName: "Company Name", cnpj: "CNPJ", activeSince: "Active since", pickDate: "choose", isMei: "Is MEI?")
-        
-        return headLine
+    func fetchHeadlines() -> [RegistrationCellProtocol] {
+        return [
+            RegistrationTextFieldModel(type: .ownerName("Owner Name")),
+            RegistrationTextFieldModel(type: .email("Email")),
+            RegistrationTextFieldModel(type: .phone("Phone for contact")),
+            RegistrationTextFieldModel(type: .companyName("Company Name")),
+            RegistrationTextFieldModel(type: .cnpj("CNPJ")),
+            RegistrationPickerModel(label: "Active since", placeholder: "choose"),
+            RegistrationSwitchModel(label: "Is MEI?")
+        ]
     }
-    
 }
+
+

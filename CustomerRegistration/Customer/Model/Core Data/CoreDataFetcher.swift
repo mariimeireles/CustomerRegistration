@@ -11,16 +11,16 @@ import CoreData
 
 class CoreDataFetcher {
     
-    func fetchUsers() -> [User] {
-        var users = [User]()
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+    func fetchClients() -> [Client] {
+        var clients = [Client]()
+        let fetchRequest: NSFetchRequest<Client> = Client.fetchRequest()
         do {
-            let fetchedUsers = try PersistenceService.context.fetch(fetchRequest)
-            users = fetchedUsers
+            let fetchedClients = try PersistenceService.context.fetch(fetchRequest)
+            clients = fetchedClients
         } catch let error as NSError {
-            print ("Failed to save an user, \(error)")
+            print ("Failed to save an client, \(error)")
         }
-        return users
+        return clients
     }
     
 }

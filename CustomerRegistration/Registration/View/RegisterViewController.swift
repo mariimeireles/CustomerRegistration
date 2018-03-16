@@ -19,7 +19,6 @@ class RegisterViewController: UIViewController, UITableViewDataSource, UITableVi
     private let phoneValidator = PhoneValidator()
     private let companyNameValidator = CompanyNameValidator()
     private let cnpjValidator = CNPJValidator()
-//    private let dataModel = DataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

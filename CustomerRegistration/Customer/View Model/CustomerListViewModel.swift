@@ -11,6 +11,7 @@ import Foundation
 class CustomerListViewModel {
     
     var customerRows: [CustomerRow] = [CustomerRow]()
+    var customers: [Customer] = [Customer]()
     private var customersFetcher: RetrieveContacts!
     var customerListState: CustomerListState!
     
@@ -26,6 +27,7 @@ class CustomerListViewModel {
             self.customerListState = CustomerListState(isPopulated: false)
         } else {
             customerRow = customers.map { customer in
+                self.customers.append(customer)
                 return CustomerRow(customer: customer)
             }
             self.customerListState = CustomerListState(isPopulated: true)

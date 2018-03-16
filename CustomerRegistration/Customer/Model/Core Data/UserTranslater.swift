@@ -37,3 +37,4 @@ extension ClientTranslater {
         self.isMei = managedCustomer.value(forKeyPath: "isMei") as! Bool
     }
 }
+
